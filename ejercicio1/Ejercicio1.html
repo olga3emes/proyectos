@@ -22,6 +22,7 @@
     </head>
     <!-- Cuerpo <body> contenido a mostrar -->
     <body>
+        <a href="#final">Ir al final</a>
         <!-- Un elemento HTML se compone de una etiqueta de apertura por ejemplo <h1> y una etiqueta de cierre </h1>, el contenido está situado entre estas etiquetas -->
         <!-- Un elemento HTML puede tener atributos, cuyo formato es nombre:"valor" ejemplo: class="class-css" -->
         <h1 class="class-css">Pokemon Perla</h1>
@@ -30,7 +31,7 @@
         <!-- Los elementos vacíos son elementos sin contenido. Ejemplo <img src="images/uneimage.jpg"/> -->
         <!-- El atributo src de una imagen contiene la ruta hacia el archivo de la imagen -->
         <!-- El atributo alt de una imagen contiene una descripción de la imagen (para personas con discapacidad visual o en caso de problema al cargar la imagen) -->
-        <img src="images/pokemon_logo.png" alt="Logo Pokemon" />
+        <img src="images/pokemon_logo.png" alt="Logo Pokemon" width="200px"/>
         <!-- 6 niveles de títulos para estructurar un documento: <h1>, <h2>, ... <h6> -->
         <h2>Nombre</h2>
         <!-- Párrafos contenidos en etiquetas <p> -->
@@ -40,6 +41,7 @@
         <ul>
             <!-- Elemento de la lista <li> -->
             <li>Pichu</li>
+            <li>Pikachu</li>
             <li>Raichu</li>
             <!-- Qx Añadir Pikachu-->
         </ul>
@@ -48,13 +50,23 @@
             <li>
                 <!-- Enlace <a> -->
                 <!-- El atributo href de un enlace contiene la dirección del sitio al cual ser dirigido -->
-                <a href="./pichu.html">Pichu</a>
+                <a href="pichu.html">Pichu</a>
+                <a href="raichu.html"></a>
                 <!-- Qx Añadir una página para Raichu -->
             </li>
             <li>
                 <a href="https://en.wikipedia.org/wiki/List_of_generation_I_Pokémon#Raichu">Raichu</a>
             </li>
         </ol>
+        <h2>Pokémon menos queridos</h2>
+        <ul>
+            <li>Normal</li>
+            <ul><li>Ratata</li>
+            <li>Ratikate</li></ul>
+            <li>Bicho</li>
+            <ul><li>Kricketot</li></ul>
+        </ul>
+
         <!-- Qx Añadir Pokémon odiados -->
         <h2>Ejercicio</h2>
         El objetivo es completar esta página.
@@ -69,6 +81,8 @@
 <p>Esto es un párrafo,</p>
 
 <p>Estamos aprendiendo HTML</p>
+
+<p id="final">Final</p>
 
     </body>
 </html>
