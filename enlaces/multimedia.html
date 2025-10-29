@@ -11,12 +11,11 @@
 
     <h1>Multimedia Links</h1>
 
-
     <!-- AUDIO-->
-    <audio src="../audio/tiposredesAudio.mp3" type="audio/mp3" controls></audio>
+    <audio src="../music/musiquita.mp3" type="audio/mp3" controls></audio>
 
     <!--Atributos loop,autoplay  -->
-    <audio src="../audio/tiposredesAudio.mp3" type="video/mp4" autoplay loop controls></audio>
+    <audio src="../music/musiquita.mp3" type="video/mp4" autoplay loop controls></audio>
 
     <!-- VIDEO-->
 
@@ -30,6 +29,58 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    <br>
+    <canvas id="canvas2">
+        <script>
+            let c = document.getElementById("canvas2");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "lightblue";
+            ctx.fillRect(10, 10, 100, 100);
+            ctx.fillStyle = "red";
+            ctx.font = "20px Arial";
+            ctx.fillText("Hola!", 30, 65);
+        </script>
+    </canvas>
+
+    <!-- FIGURE -->
+    <figure>
+        <img width="500px" src="../img/foto.jpg" alt="Paisaje de montaña">
+        <figcaption>Paisaje al amanecer en los Alpes.</figcaption>
+    </figure>
+
+    <br>
+
+    <figure>
+        <pre><code>
+    function saludar() {
+        console.log("¡Hola Mundo!");
+    }
+  </code></pre>
+        <figcaption>Ejemplo de una función JavaScript simple.</figcaption>
+    </figure>
+
+
+    <figure>
+        <table border="1">
+            <tr>
+                <th>Planeta</th>
+                <th>Diámetro (km)</th>
+            </tr>
+            <tr>
+                <td>Mercurio</td>
+                <td>4,879</td>
+            </tr>
+            <tr>
+                <td>Venus</td>
+                <td>12,104</td>
+            </tr>
+            <tr>
+                <td>Tierra</td>
+                <td>12,742</td>
+            </tr>
+        </table>
+        <figcaption>Tabla comparativa de diámetros planetarios.</figcaption>
+    </figure>
 
 </body>
 
