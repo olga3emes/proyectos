@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+
+    <form>
+
+        <label for="nombreCompleto">Nombre completo:</label>
+        <input type="text" id="nombreCompleto" autofocus name="nombreCompleto" required placeholder="Introduce tu nombre completo"><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Introduce tu email"><br><br>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required placeholder="Introduce tu contraseña"><br><br>
+
+        <label for="password2">Confirma la contraseña</label>
+        <input type="password" id="password2" name="password2" required placeholder="Confirma tu contraseña"><br><br>
+
+        <label for="teléfono">Teléfono</label>
+        <input type="tel" id="teléfono" name="teléfono" required pattern="[0-9]{9}" placeholder="Introduce tu teléfono"><br><br>
+
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+        <label for="pais">¿Cuál es tu páis de naciemiento?</label>
+        <select id="pais" name="pais" required>
+            <option value="" disabled selected>Selecciona tu país</option>
+            <option value="españa">España</option>
+            <option value="francia">Francia</option>
+            <option value="italia">Italia</option>
+            <option value="alemania">Alemania</option>
+            <option value="portugal">Portugal</option>
+        </select><br><br>
+
+        <label>Género:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="otro" name="genero" value="otro" required>
+        <label for="otro">Otro</label><br><br>
+
+        <label for="color">Selecciona tu color favorito:</label>
+        <input type="color" id="color" name="color" value="#345678"><br><br>
+
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>

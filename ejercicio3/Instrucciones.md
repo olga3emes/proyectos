@@ -19,7 +19,7 @@
 
 - Género (radio buttons)
 
-- Color favorito
+- Color favorito  
 
 - Nivel de satisfacción (rango del 0 al 10)
 
@@ -30,4 +30,4 @@
 - Botón para enviar y limpiar el formulario
 
 ### Usa atributos HTML5 modernos:
-required, placeholder, pattern, autofocus, autocomplete, min, max, step, size, readonly, disabled.
+required✅, placeholder✅, pattern✅, autofocus✅, autocomplete✅, min, max, step, size, readonly, disabled✅.
