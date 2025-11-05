@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Olga Moreno">
+    <meta description="Ejercicio de formularios HTML">
+    
     <title>Ejercicio3</title>
 </head>
 <body>
@@ -47,7 +50,29 @@
 
         <label for="color">Selecciona tu color favorito:</label>
         <input type="color" id="color" name="color" value="#345678"><br><br>
+        <label for="satisfaccion">Selecciona tu nivel de satisfacción (0-10)</label>
+         <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10" step="1" ><br><br>
+        <!--<select name="satisfaccion2" id="satisfaccion2">
+            <option value="" disabled selected>Selecciona tu nivel de satisfacción</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select> -->
+        <br><br>
+        <label for="fotoPerfil">Sube tu foto de perfil:</label>
+        <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*"><br><br>
 
+        <label for="aceptarTerminos"><a href="#">Aceptar términos y condiciones</a></label>
+        <input type="checkbox" id="aceptarTerminos" name="aceptarTerminos" required>
+        <br><br>
 
         <input type="submit" value="Enviar">
     </form>
