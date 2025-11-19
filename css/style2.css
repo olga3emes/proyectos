@@ -1,0 +1,32 @@
+:root{
+    --main-color: #507fff;
+    --secondary-color: #2e31cc;
+    --accent-color: #ff5733;
+    --verdecito: #28a745;
+}
+
+*{
+    font-family: Arial, sans-serif;
+}
+
+/* naranja_mecanica : snake_case
+
+naranjaMecanica  : camelCase
+
+naranja-mecanica : kebab-case
+
+*/
+
+div{
+    color: var(--secondary-color);
+
+    p{
+        color: var(--accent-color);
+    }
+
+}
+
+p{
+    color: var(--verdecito)
+}
+

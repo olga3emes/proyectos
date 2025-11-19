@@ -3,9 +3,17 @@
     font-family: Arial, sans-serif;
 }
 
+:root{
+    --main-color: #507fff;
+    --secondary-color: #2e31cc;
+    --accent-color: #ff5733;
+    --background-main-color: #f0f0f0;
+    --black-standard: #131314;
+}
+
 h1{
-    color: blue;
-    background-color: #c9d1ff;
+    color: var(--main-color);
+    background-color: var(--background-main-color)
 }
 
 #p2{
