@@ -3,6 +3,7 @@
     --secondary-color: #2e31cc;
     --accent-color: #ff5733;
     --verdecito: #28a745;
+    --black-standard: #131314;
 }
 
 *{
@@ -18,6 +19,11 @@ naranja-mecanica : kebab-case
 */
 
 div{
+
+    width: 200px;
+    height: 100px;
+    background-color: cornsilk;
+
     color: var(--secondary-color);
 
     p{
@@ -27,6 +33,30 @@ div{
 }
 
 p{
-    color: var(--verdecito)
+    color: var(--verdecito);
+    font-size: 1em;
+   
 }
 
+#caja{
+    width: 50%;
+    height: 50%;
+    background-color: tan;
+}
+
+
+#caja2{
+    width: 50vw;
+    height: 25vh;
+    background-color: lightsteelblue;
+}
+
+main{
+    min-height: 85vh;
+}
+
+footer{
+    background-color: var(--black-standard);
+    color: whitesmoke;
+    min-height: 5vh;
+}
