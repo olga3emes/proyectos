@@ -22,7 +22,7 @@ div{
 
     width: 200px;
     height: 100px;
-    background-color: cornsilk;
+    background-color: rgba(255, 248, 220,0);
 
     color: var(--secondary-color);
 
@@ -48,7 +48,9 @@ p{
 #caja2{
     width: 50vw;
     height: 25vh;
-    background-color: lightsteelblue;
+    /*background: linear-gradient(45deg, #c9d0e5,#d2e833,#ff5733, #2e31cc)*/
+    /*background: radial-gradient(circle, #ff5733, #507fff, #fff);*/
+    background:conic-gradient(from 60deg , #c9d0e5,#d2e833,#ff5733, #2e31cc);
 }
 
 main{
