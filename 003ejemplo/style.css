@@ -1,0 +1,44 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p.normal {
+  white-space: normal;
+}
+
+p.pre {
+  white-space: pre;
+}
+
+p.nowrap {
+  white-space: nowrap;
+}
+p.prewrap {
+  white-space: prewrap;
+}
+
+.enlace:visited {
+  color: red;
+}
+
+.enlace:hover {
+  color: green;
+}
+
+.enlace:link {
+  color: aquamarine;
+}
+
+.enlace:active {
+  color: cadetblue;
+}
+
+#contenedor {
+  height: 300px;
+  width: 200px;
+  background-color: aquamarine;
+  overflow: scroll; /*lo normal sería con auto*/
+}
+.desbordamiento {
+  width: 300px;
+}
