@@ -4,14 +4,12 @@
   background-color: lightpink;
 
   margin: auto;
-  
 }
 
 #caja1 {
   background-color: red;
   width: 100px;
   height: 100px;
-   
 }
 #caja2 {
   background-color: rgb(23, 181, 63);
@@ -19,29 +17,29 @@
   height: 100px;
   float: right;
 }
-  
+
 #caja3 {
   background-color: rgb(29, 31, 151);
   width: 100px;
   height: 100px;
-  float:left
-  
-   
+  float: left;
 }
 #caja4 {
   background-color: rgb(255, 238, 5);
   width: 100px;
   height: 100px;
- margin:auto;
-  
- 
- 
+  margin: auto;
+  z-index: 30;
+  position: relative;
 }
 #caja5 {
   background-color: rgb(247, 8, 235);
   width: 100px;
   height: 100px;
-  margin:auto;
+  position: relative;
+  top: -20px;
+  margin: auto;
+  z-index: 20;
 }
 #caja6 {
   background-color: rgb(255, 128, 0);
