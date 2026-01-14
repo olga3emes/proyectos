@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Float en CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">Propiedad Float</h1>
+    </header>
+
+    <div class="contenedor">
+        <img src="image.png" alt="Imagen de perfil" class="imagen-flotante">
+        <p>
+            Esta es una descripción de la tarjeta. La imagen está flotando a la izquierda,
+            permitiendo que el texto fluya a su alrededor. La propiedad <strong>float: left;</strong>
+            nos permite colocar la imagen en un lado mientras el texto la rodea.
+            Podemos usar esta propiedad para crear diseños de columnas o alinear elementos.
+        </p>
+
+
+        <img src="image.png" alt="Imagen de perfil" class="imagen-flotante-derecha">
+        <p>
+            En este caso, la imagen está flotando a la derecha utilizando <strong>float: right;</strong>.
+            Esto es útil cuando queremos que el texto se acomode a la izquierda de la imagen.
+            También se debe tener en cuenta la propiedad <strong>clear</strong> para evitar problemas con otros
+            elementos flotantes.
+        </p>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+    <p class="final">
+        El uso de <strong>clear: both;</strong> asegura que los elementos flotantes anteriores
+        no afecten el contenido que sigue. Sin esta propiedad, el diseño podría verse afectado.
+    </p>
+
+    <footer>
+        <p> ©
+            <script>document.write(new Date().getFullYear());</script> Olga M. Moreno Martín - CSS Float
+        </p>
+    </footer>
+</body>
+
+</html>

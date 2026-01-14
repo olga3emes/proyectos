@@ -1,0 +1,76 @@
+/* Importando una fuente personalizada de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+body{
+
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /*NO TOCAR*/
+}
+
+
+.card {
+    
+  }
+  
+  .card-background {
+    
+  }
+  
+  .card-content {
+   
+  }
+  
+  .name {
+    
+  }
+  
+  .description {
+    
+  }
+  
+  .contact-btn {
+   
+  }
+  
+  .contact-btn:hover {
+   
+  }
+  
+  
+
+.floating-element {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, #ff5722);
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 10;
+  margin: 10px;
+  animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
