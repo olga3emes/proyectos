@@ -1,0 +1,28 @@
+span{
+    display: block;
+}
+
+
+img{
+    display: block;
+}
+
+a{
+    display: block
+}
+
+.caja1{
+
+    display: inline;
+    background-color: lightcoral;
+}
+
+.caja2{
+    display: none;
+    background-color: lightseagreen;
+}
+
+.caja3{
+    display: inline-block;
+    background-color: lightblue;
+}
