@@ -1,0 +1,22 @@
+#init {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: lightyellow;
+    border: 1px solid #000;
+  }
+  #transformacion {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid #000;
+  }
+  
+.desplazamiento-derecha-abajo {  
+    transform: translate(300px, 60px);  
+ } 

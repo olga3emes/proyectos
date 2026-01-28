@@ -1,0 +1,14 @@
+#init {  
+    position: absolute;  
+    left: 100px;  
+    top: 100px;  
+
+}  
+#transformacion {  
+    position: absolute;  
+    left: 1000px;  
+    top: 100px;  
+}  
+.deformacion {  
+    transform: skew(-15deg,5deg);  
+}  

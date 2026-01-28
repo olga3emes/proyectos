@@ -1,0 +1,31 @@
+#desplazamiento {  
+    position: absolute;  
+    left: 20px;  
+    top: 20px;  
+ } 
+
+ #desplazamiento {  
+    position: absolute;  
+    left: 200px;  
+    top: 20px;  
+    transition-property: left 30px;  
+    transition-duration: 1s;  
+    transition-timing-function: ease-in;  
+    transition-delay: 2s;  
+ } 
+
+ /** También podemos usar transition con todos sus atributos:
+
+ #desplazamiento {  
+   position: absolute;  
+   left: 20px;  
+   top: 20px;  
+   transition: left 2s ease-in 2s;  
+} 
+
+*/
+
+#desplazamiento:hover {  
+    left: 250px;  
+    top:  20px;  
+ } 

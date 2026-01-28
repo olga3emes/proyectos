@@ -1,0 +1,16 @@
+#init {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+#transformacion {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+.escalado-p {
+  transform: scale(0.45);
+}
+.escalado-np {  
+    transform: scale(0.5, 0.25);  
+ } 

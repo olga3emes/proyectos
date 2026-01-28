@@ -1,0 +1,13 @@
+#init {  
+    position: absolute;  
+    left: 50px;  
+    top: 40px;  
+}  
+#transformacion {  
+    position: absolute;  
+    left: 800px;  
+    top: 40px;  
+}  
+.transfo-multi {  
+    transform: scale(.7) rotate(30deg);  
+}  

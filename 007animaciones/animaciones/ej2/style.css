@@ -1,0 +1,26 @@
+img {
+  animation-duration: 5s;
+  animation-name: luna;
+  animation-iteration-count: infinite; /* si queremos que se repita */
+  animation-direction: alternate; /* Para que no salte de principio a fin,
+   y transicione de forma natural se alterna el movimiento */
+   width: 5%;
+}
+
+@keyframes luna {
+  from {
+    margin-left: 100%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 5%;
+  }
+
+  /* nuevo fotograma al 75 % se vuelve más grande y se le aplica margen izdo.*/
+  75% {
+    margin-left: 25%;
+    width: 25%
+  }
+}

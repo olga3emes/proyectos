@@ -1,0 +1,45 @@
+#gradientes{
+    columns: 6;
+}
+
+#panel {  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    background: linear-gradient(to bottom right, rgb(86, 247, 196), white);
+ }
+#panel2 {  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    background: linear-gradient(to bottom, blue, white 80%, orange);
+ }
+#panel3 {  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    background: linear-gradient(70deg, lightyellow, rgb(157, 217, 5));
+ }
+#panel4 {  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    background: radial-gradient(pink 25%, lightsalmon 25%, purple 50%);
+ }
+#panel5 {  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(gradient.jfif)
+}
+#panel6{  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+}
+
+/* Degrado no es lo mismo que opacidad */
+
+#panel6:hover{
+    opacity: 0.5;
+}

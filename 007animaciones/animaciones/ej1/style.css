@@ -1,0 +1,33 @@
+#panel {  
+    background-color: lightseagreen;  
+    position: relative;  
+    width: 100px;  
+    height: 100px;  
+    animation-name: panel-sea;  
+    animation-duration: 5s;  
+    animation-iteration-count: infinite;  
+ } 
+
+@keyframes panel-sea {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: 400px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+/** Sintaxis Abreviada
+#panel {  
+   background-color: lightseagreen;  
+   position: relative;  
+   width: 100px;  
+   height: 100px;  
+   animation: panel-sea 5s infinite;  
+} 
+ */
+
+ 
