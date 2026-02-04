@@ -1,0 +1,21 @@
+
+#contenedor {   
+    /* Rejilla de paginación */   
+    display: grid;   
+    grid-template-columns: repeat(3,150px);   
+    grid-template-rows: repeat(3, 100px);   
+    gap: 10px;   
+    width: 600px;   
+    height: 400px;   
+    padding: 10px;   
+    border: 1px solid #000;   
+    background-color: #eee;
+    justify-content: center; /*space-around, space-between, center, start,end, space-evenly*/
+   
+}   
+p {   
+    margin: 0;   
+    padding: 5px;   
+    border: 1px solid #000;   
+    background-color: #fff;   
+} 

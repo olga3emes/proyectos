@@ -1,0 +1,26 @@
+#contenedor {   
+    /* Rejilla de paginación */   
+    display: grid;   
+    grid-template-columns: 1fr 250px;   
+    gap: 20px;   
+    /* Formateo */   
+    width: 90%;   
+    margin: auto;   
+}   
+/* Formateo */   
+header, footer {   
+     grid-column-start: 1;   
+    grid-column-end: 3;  
+    background-color: #eee;   
+    text-align: center;   
+}   
+aside {   
+    background-color: #bbb;   
+}   
+header, main, aside, footer {   
+    border: 1px solid #000;   
+    padding: 10px;   
+}   
+p {   
+    margin: 0 0 20px 0;   
+} 
