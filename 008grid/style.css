@@ -1,0 +1,133 @@
+/* MOBILE FIRST */
+:root {
+  --bg-yellow: #ffeb3b;
+  --bg-red: #f44336;
+  --bg-blue: #3621f3;
+  --bg-black: #0e0202;
+  --bg-white: #fbfbfb;
+}
+
+*{
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--bg-black);
+}
+
+
+#contenedor {
+  /* grid */
+
+  display: grid;
+  /* grid-template-columns: 1fr; */
+
+  grid-template-areas: 
+  "rojo1"
+  "rojo2"
+  "azul1"
+  "amarillo1"
+  "bauhaus"
+  "blanco1"
+  "azul2"
+  "amarillo2";
+  gap: 1em;
+  margin:1em;
+  padding-top: 10px;
+  background-color: var(--bg-black);
+}
+
+#rojo1{
+    grid-area: rojo1;
+    background-color: var(--bg-red);
+    height: 60px;
+}
+#rojo2{
+    grid-area: rojo2;
+    background-color: var(--bg-red);
+    height: 60px;
+}
+#azul1{
+    grid-area: azul1;
+    background-color: var(--bg-blue);
+    height: 60px;
+}
+
+#amarillo1{
+    grid-area: amarillo1;
+    background-color: var(--bg-yellow);
+    height: 60px;
+}
+
+#bauhaus{
+
+    grid-area: bauhaus;
+    background-color: var(--bg-white);
+    text-align: center;
+
+    h1{
+        font-size: 75px;
+    }
+
+    p{
+        font-size: small;
+        margin: 10px;
+        padding: 10px 20px;
+    }
+}
+
+#blanco1{
+    grid-area: blanco1;
+    background-color: var(--bg-white);
+    height: 60px;
+}
+
+#azul2{
+    grid-area: azul2;
+    background-color: var(--bg-blue);
+    height: 60px;
+}
+
+#amarillo2{
+    grid-area: amarillo2;
+    background-color: var(--bg-yellow);
+    height: 60px;
+}
+
+/* PARA TABLET */
+
+@media only screen and (min-width:768px) {
+    
+    #contenedor{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "azul1 azul1 azul1"
+        "bauhaus bauhaus bauhaus"
+        "blanco1 azul2 amarillo1"
+         "rojo1 rojo2 rojo2"
+         "amarillo2 rojo2 rojo2"
+         "amarillo2 rojo2 rojo2";
+    }
+
+
+    #azul1,#azul2,#blanco1,#amarillo1{
+        height: 100px;
+    }
+
+    #rojo1{
+        height: 150px;
+    }
+
+    #rojo2{
+        height: 500px;
+    }
+    #amarillo2{
+        height: 334px;
+    }
+
+    #bauhaus{
+
+        text-align: right;
+        padding-right: 20px;
+    }
+}
