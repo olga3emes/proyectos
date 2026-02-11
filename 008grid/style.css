@@ -131,3 +131,39 @@ body{
         padding-right: 20px;
     }
 }
+
+/** PARA DESKTOP */
+
+@media only screen and (min-width: 1024px){
+
+    #contenedor{
+
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "rojo1      rojo2 rojo2 azul1   azul1   azul1"
+        "amarillo2  rojo2 rojo2 bauhaus bauhaus bauhaus"
+        "amarillo2  rojo2 rojo2 blanco1 azul2 amarillo1";
+    }
+
+
+    #rojo2{
+        height: 682px;
+        /* margin-right: 1em; */
+    }
+
+    #amarillo2{
+        height: 515px;
+    }
+
+    #bauhaus{
+        margin-top: -50px;
+        height: 450px;
+
+        p{
+            margin-right: -2%;
+        }
+
+
+    }
+
+}
