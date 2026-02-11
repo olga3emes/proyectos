@@ -1,0 +1,36 @@
+body{
+  font-family: sans-serif;
+}
+  ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    padding:0px;
+    gap: 5px;
+    list-style: none; 
+  }  
+  ul li{
+    background: coral;
+    flex-grow: 1;
+   
+  }
+
+  #servicio{
+    background: lightblue;
+ 
+  }
+
+  #contacto{
+    background: lightgreen;
+   
+  }
+
+  ul a, ul a:link{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    display:block;
+
+  }

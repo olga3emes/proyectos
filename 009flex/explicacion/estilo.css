@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: large;
+    text-align: left;
+    margin: 50px;
+}
+
+#caja{
+    display: flex;
+    border: solid 4px rgb(0, 166, 255);
+    grid-row: 1/2;
+    grid-column: 1/8;
+    height: 800px;
+}
+#controles{
+    grid-row: 1/2;
+    grid-column: 9/13;
+}
+.cajita{
+    background-color: rgba(127, 232, 255, 0.431);
+    border: solid 1px rgb(0, 21, 255);
+}
+
+#caja1{
+    width: 250px;
+}
+#caja2{
+    width: 150px;
+}
+#caja3{
+    width: 350px;
+}
+#caja4{
+    width: 120px;
+}
+
+
+
+
+#rejilla{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}

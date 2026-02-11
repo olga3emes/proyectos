@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <!--Cabecera-->
+  <head>
+    <title>Comprendiendo los grid</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="estilo.css" rel="stylesheet">
+    <style type="text/css">
+        #rejilla{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: solid 1px black;
+            margin: 50px;
+            /*Prueba a  modificar justify-items y align-items*/
+            justify-items: right;
+            align-items: center;
+        }
+        .cajita{
+            background-color: aquamarine;
+        }
+        #caja1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        #caja2{
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        #caja3{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+        #caja4{
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        #caja5{
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        #caja6{
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+        #caja7{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        #caja8{
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+        #caja9{
+            grid-row: 3/4;
+            grid-column: 3/4;
+        }
+        
+        
+    </style>
+  </head>
+  <!--Cuerpo-->
+  <body>
+  <div id="rejilla">
+    <div class="cajita" id="caja1">Lorem ipsum</div>
+    <div class="cajita" id="caja2">Lorem ipsum, lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum</div>
+    <div class="cajita" id="caja3">Lorem ipsum...</div>
+    <div class="cajita" id="caja4">Lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, </div>
+    <div class="cajita" id="caja5">Lorem ipsum...</div>
+    <div class="cajita" id="caja6">Lorem ipsum...</div>
+    <div class="cajita" id="caja7">Lorem ipsum...</div>
+    <div class="cajita" id="caja8">Lorem ipsum...</div>
+    <div class="cajita" id="caja9">Lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, , lorem ipsum, </div>
+  </div>
+  </body>
+</html>

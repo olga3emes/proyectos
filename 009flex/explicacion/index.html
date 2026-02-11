@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <!--Cabecera-->
+  <head>
+    <title>Comprendiendo los flexboxes</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="estilo.css" rel="stylesheet">
+    <script src="js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="js/programa.js"></script>
+  </head>
+  <!--Cuerpo-->
+  <body>
+  <h1>Flexboxes</h1>
+  <p>El contenedor que ves rodeado por una línea azul está usando flexbox. Experimenta con las propiedades que ves para entender como funcionan las distintas propiedades de alineación. La caja tiene una altura de 800px y determinadas combinaciones forzarán a que el texto se salga de los límites.</p>
+  <div id="rejilla">
+    <div id="caja">
+        <div class="cajita" id="caja1">
+            <p>
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. . 
+            </p>
+        </div>
+        <div class="cajita" id="caja2">
+          <p>
+            Sed mollis nibh in libero fermentum, a faucibus leo cursus. Morbi ultricies massa tortor, bibendum varius justo commodo non. 
+          </p>
+        </div>
+        <div class="cajita" id="caja3">
+          <p>
+            Pellentesque hendrerit, ipsum non eleifend volutpat, ex urna gravida massa, at dignissim urna eros ut neque. Vivamus egestas ex eget tortor tincidunt vehicula. Quisque condimentum tempor ipsum quis ultricies. Maecenas malesuada interdum ex, nec imperdiet purus rhoncus id. Duis luctus nibh fringilla, ullamcorper sem eget, ullamcorper nibh. Vivamus bibendum suscipit risus, quis condimentum sapien finibus a. 
+          </p>
+        </div>
+        <div class="cajita" id="caja4">
+            <p>
+            Vivamus egestas ex eget tortor tincidunt vehicula. Quisque condimentum tempor ipsum quis ultricies. 
+            </p>
+        </div>
+        <div class="cajita" id="caja5">
+          <p>
+Duis luctus nibh fringilla, ullamcorper sem eget, ullamcorper nibh. Vivamus bibendum suscipit risus, quis condimentum sapien finibus a. Praesent accumsan malesuada est, eu pulvinar felis dapibus in. 
+          </p>
+      </div>
+    </div>
+    <div id="controles">
+      <h4>Dirección del flexbox</h4>
+      <select id="orientacion">
+        <option value="row">Row</option>
+        <option value="row-reverse">Row reverse</option>
+        <option value="column">Column</option>
+        <option value="column-reverse">Column reverse</option>
+      </select>
+      <h4>Wrapping</h4>
+      <p>Para comprobar esto haz muy estrecha la ventana del navegador y modifica esta propiedad.</p>
+      <select id="wrapping">
+        <option value="nowrap">Sin wrapping</option>
+        <option value="wrap">Con wrapping</option>
+        <option value="wrap-reverse">Con wrapping inverso</option>
+      </select>
+      <h4>Alineación horizontal de elementos</h4>
+      <select id="alineacion-horizontal">
+        <option value="justify-content:flex-start">justify-content:flex-start</option>
+        <option value="justify-content:flex-end">justify-content:flex-end</option>
+        <option value="justify-content:space-between">justify-content:space-between</option>
+        <option value="justify-content:space-evenly">justify-content:space-evenly</option>
+        <option value="justify-content:space-around">justify-content:space-around</option>
+      </select>
+      <h4>Alineación vertical</h4>
+      <p>Recuerda que "content" afecta al "conjunto de elementos" mientras que "-items" trata a cada uno por separado.</p>
+      <select id="alineacion-vertical">
+        <optgroup label="Align-content">
+          <option value="align-content:normal">align-content:normal</option>
+          <option value="align-content:flex-start">align-content:flex-start</option>
+          <option value="align-content:flex-end">align-content:flex-end</option>
+          <option value="align-content:center">align-content:center</option>
+          <option value="align-content:stretch">align-content:stretch</option>
+          <option value="align-content:space-around">align-content:space-around</option>
+        </optgroup>
+        <optgroup label="Align-items">
+          <option value="align-items:start">align-items:start</option>
+          <option value="align-items:end">align-items:end</option>
+          <option value="align-items:center">align-items:center</option>
+          <option value="align-items:stretch">align-items:stretch</option>
+        </optgroup>
+      </select>
+      
+      <br>
+      <h4>CSS resultado</h4>
+      <textarea id="css_resultado" rows="8" cols="30"></textarea>
+    </div>
+  </div>
+  </body>
+</html>
