@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro SYSTEM "001.dtd">
+<libro>
+    <titulo>El Quijote</titulo>
+    <autor>Cervantes</autor>
+</libro>

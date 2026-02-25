@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE producto SYSTEM "004.dtd">
+<producto id="p01" categoria="tecnologia">
+    <nombre>Ratón inalámbrico</nombre>
+    <precio>19.99</precio>
+</producto>
+

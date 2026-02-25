@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona SYSTEM "002.dtd">
+<persona>
+    <nombre>Ana</nombre>
+    <apellido>López</apellido>
+    <edad>25</edad>
+</persona>

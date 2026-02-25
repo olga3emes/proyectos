@@ -1,0 +1,4 @@
+<!ELEMENT persona (nombre, apellido, edad)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>

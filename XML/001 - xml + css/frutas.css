@@ -1,0 +1,21 @@
+frutas{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    display: block;
+}
+
+fruta{
+    color: red;
+    font-size: 20px;
+    display: block;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+fruta[tipo="dulce"]{
+    background-color: pink;
+}
+fruta[tipo="ácida"]{
+    background-color: lightgreen;
+}

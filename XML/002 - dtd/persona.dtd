@@ -1,0 +1,5 @@
+<!DOCTYPE persona[
+    <!ELEMENT persona (nombre)>
+    <!ELEMENT nombre (#PCDATA)>
+   
+   ]>

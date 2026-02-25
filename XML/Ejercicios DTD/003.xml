@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE clase SYSTEM "003.dtd">
+<clase>
+    <alumno>
+        <nombre>Ana</nombre>
+    </alumno>
+    <alumno>
+        <nombre>Pedro</nombre>
+    </alumno>
+</clase>

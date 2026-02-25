@@ -1,0 +1,5 @@
+<!ELEMENT empresa (direccion,nombre,empleado*)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT empleado (nombre,puesto)>
+<!ELEMENT puesto (#PCDATA)>

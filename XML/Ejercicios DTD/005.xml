@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa SYSTEM "005.dtd">
+<empresa>
+    <direccion>Calle Falsa 123</direccion>
+    <nombre>Tech Solutions</nombre>
+    <empleado>
+        <nombre>Ana</nombre>
+        <puesto>Desarrolladora</puesto>
+    </empleado>
+    <empleado>
+        <nombre>Pedro</nombre>
+        <puesto>Diseñador</puesto>
+    </empleado>
+</empresa>

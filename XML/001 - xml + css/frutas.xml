@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="frutas.css"?>
+<frutas>
+    <fruta tipo="dulce">Manzana</fruta>
+    <fruta tipo="ácida">Limón</fruta>
+</frutas>
