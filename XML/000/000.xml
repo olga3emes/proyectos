@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xml:lang>es</xml:lang>
+<xml:id>001</xml:id>
+<personas>
+    <persona dni="12345678A" gender="Male">
+        <name>John Doe</name>
+        <age>30</age>
+        <occupation>Software Engineer</occupation>
+        <Espanol/>
+    </persona>
+    <!-- esto es un comentario -->
+    <persona dni="87654321B" gender="Female">
+        <name>Jane Smith</name>
+        <age>28</age>
+        <occupation>Graphic Designer</occupation>
+        <sex>F</sex>
+        <color_favorito>Azul</color_favorito>
+    </persona>
+</personas>
