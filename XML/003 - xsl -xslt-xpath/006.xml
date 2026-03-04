@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="006.xsl" type="text/xsl"?>
+<ciudades>
+    <ciudad pais="España">Madrid</ciudad>
+    <ciudad pais="Francia">París</ciudad>
+</ciudades>
