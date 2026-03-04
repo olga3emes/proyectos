@@ -1,0 +1,14 @@
+{
+    "empleados": [
+        {
+            "nombre": "Ana",
+            "edad": 28,
+            "ciudad": "Barcelona"
+        },
+        {
+            "nombre": "Luis",
+            "edad": 35,
+            "ciudad": "Valencia"
+        }
+    ]
+}

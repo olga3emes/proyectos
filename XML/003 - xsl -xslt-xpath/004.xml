@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="004.xsl"?>
+<alumnos>
+    <alumno edad="18">Ana</alumno>
+    <alumno edad="22">Luis</alumno>
+    <alumno edad="17">Marta</alumno>
+</alumnos>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="005.xsl" type="text/xsl"?>
+<personas>
+    <persona><nombre>Carlos</nombre></persona>
+    <persona><nombre>Ana</nombre></persona>
+    <persona><nombre>Beatriz</nombre></persona>
+</personas>

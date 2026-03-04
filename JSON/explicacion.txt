@@ -1,0 +1,7 @@
+JSON significa JavaScript Object Notation
+
+Es un lenguaje ligero de marcado
+
+Lo usan las APIs, para intercambiar datos
+También JavaScript, como es obvio, para definir Objetos
+Y curiosamente, también es en el que se basan algunas bases de datos como MongoDB (que lo ha modificado levemente y le llamado BSON)
