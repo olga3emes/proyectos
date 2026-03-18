@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">//nuestro estilo personalizado
+    <link rel="stylesheet" href="css/style.css"><!-- nuestro estilo personalizado -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="js/bootstrap.bundle.js" defer></script>
 </head>
+
 <body>
-    
+
+<h1 class="display-1">My First Bootstrap Page <small class="text-muted">A subtitle</small></h1>
+
+<p class="lead">This is a simple paragraph to <span class="fw-bolder">demonstrate</span> the <span class="fst-italic">lead</span> class in Bootstrap.</p>
+
+<p><abbr class="initialism" title="World Health Organization">WHO</abbr> is a specialized agency of the United Nations.</p>
+<br>
+<figure class="figure">
+    <blockquote class="blockquote">
+        <p class="mb-0">"The only way to do great work is to love what you do."</p>
+    </blockquote>
+    <figcaption class="figure-caption text-end">- Steve Jobs</figcaption>
+</figure>
+<br>
+<p class="text-uppercase">Mi nombre es <span class=" bg-info text-nowrap">Juan</span>.</p>
+<p class="text-lowercase">Mi nombre es Juan.</p>
+<p class="text-capitalize">Mi nombre es Juan.</p>
+<br>
+<a href="https://www.google.com" class="text-decoration-none text-black">Visit Google</a>
+<br>
+<br>
+<div class="container w-50">
+<figure>
+    <img class="img-fluid rounded" src="img/foto.jpg" alt="Montañas">
+    <figcaption class="figure-caption text-center">Una hermosa vista de las montañas.</figcaption>
+</figure>
+</div>
+
+
+
+
+<br>
+    <div class="container-fluid bg-danger">
+        <div class="row  justify-content-center text-center g-2" style="height: 200px;">
+           
+            <div class=" col-sm-12 col-md-6 col-lg-4  bg-info">Column</div>
+            <div class=" col-sm-12 col-md-6 col-lg-4 bg-warning">Column</div>
+        </div>
+         <div class="row  justify-content-end text-center g-2" style="height: 200px;">
+            
+            <div class=" col-sm-12 col-md-6 col-lg-4 gy-5  bg-info">Column</div>
+            <div class=" col-sm-12 col-md-6 col-lg-4 bg-warning">Column</div>
+        </div>
+         <div class="row  justify-content-start text-center g-2" style="height: 200px;">
+          
+            <div class=" col-sm-12 col-md-6 col-lg-4  bg-info">Column</div>
+            <div class=" col-sm-12 col-md-6 col-lg-4 bg-warning">Column</div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
