@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #cae1f4, #88f5d8);
+  margin: 0;
+}
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #6800cf;
+  cursor: pointer;
+  background: white;
+  text-align: left;
+}
+button:hover {
+  background: linear-gradient(to right, #6800cf, #6702ff);
+}
+/* CONTENEDOR PRINCIPAL */
+.test-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* TÍTULO PRINCIPAL */
+.test-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* TARJETA DE PREGUNTA */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* TÍTULO DE PREGUNTA */
+.question-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* BOTÓN DE RESPUESTA */
+.answer-btn {
+  padding: 10px;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+  background: white;
+  text-align: left;
+}
+
+.answer-btn:hover {
+  background: #eee;
+}
+
+/* CUANDO UNA RESPUESTA ESTÁ SELECCIONADA */
+.answer-selected {
+  background: #eee !important;
+}
+
+/* RESPUESTA CORRECTA TRAS CORRECCIÓN */
+.answer-correct {
+  border: 2px solid green !important;
+  color: green !important;
+  font-weight: bold !important;
+}
+
+/* RESPUESTA INCORRECTA TRAS CORRECCIÓN */
+.answer-wrong {
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+/* BOTÓN CORREGIR */
+.btn-correct {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #6702ff;
+  color: white;
+  text-align: center;
+}
+
+/* RESULTADO */
+.result-text {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #f2f2f2;
+  background: #7359f3;
+  padding: 10px;
+  border-top: 1px solid #9000ff;
+}
