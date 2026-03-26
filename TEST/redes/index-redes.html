@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Interactivo Autocorregible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- React y ReactDOM desde CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel para permitir JSX en navegadores -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const preguntas = [
+  {
+    enunciado: "¿Cuál es la capa del modelo OSI responsable de enrutar paquetes entre redes?",
+    opciones: ["Enlace de datos", "Red", "Transporte", "Aplicación"],
+    correcta: 1
+  },
+  {
+    enunciado: "En el modelo TCP/IP, ¿en qué capa se ubican TCP y UDP?",
+    opciones: ["Acceso a la red", "Internet", "Transporte", "Aplicación"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué protocolo se encarga de traducir una dirección IP a una dirección MAC en una LAN?",
+    opciones: ["ICMP", "DNS", "DHCP", "ARP"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué campo de una trama Ethernet se usa para detectar errores?",
+    opciones: ["Tipo/Longitud", "Preamble", "FCS (CRC)", "Dirección MAC origen"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Cuál es el tamaño clásico del campo de direcciones MAC en Ethernet?",
+    opciones: ["4 bytes", "6 bytes", "8 bytes", "16 bytes"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué estándar define Ethernet?",
+    opciones: ["IEEE 802.11", "IEEE 802.3", "IEEE 802.1Q", "IEEE 802.1D"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué método de acceso al medio describía Ethernet clásico?",
+    opciones: ["CSMA/CA", "Token Passing", "CSMA/CD", "TDMA"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué cable usarías para conectar un PC a un switch en redes actuales?",
+    opciones: ["Cruzado (cross-over)", "Directo (straight-through)", "Serial DCE", "Coaxial"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué tecnología hace innecesario, en muchos casos, distinguir entre cable directo y cruzado?",
+    opciones: ["PortFast", "Auto-MDI/MDIX", "LACP", "VTP pruning"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál de estas categorías de cobre soporta 10 Gbps hasta 100 m de forma típica en entornos controlados?",
+    opciones: ["Cat 5e", "Cat 6 (≤55 m)", "Cat 6A", "Cat 3"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué tipo de fibra se recomienda para distancias de decenas de kilómetros?",
+    opciones: ["Multimodo (MMF)", "Monomodo (SMF)", "UTP", "STP"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué conector de fibra es pequeño y muy usado en alta densidad?",
+    opciones: ["BNC", "LC", "RJ-11", "VGA"],
+    correcta: 1
+  },
+  {
+    enunciado: "En una topología en estrella, el dispositivo central suele ser:",
+    opciones: ["Un hub o switch", "Un router exclusivamente", "Un repetidor", "Un módem"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué topología proporciona mayor redundancia de caminos?",
+    opciones: ["Bus", "Anillo", "Árbol", "Malla"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué dispositivo reduce dominios de colisión creando uno por puerto?",
+    opciones: ["Hub", "Switch", "Repetidor", "Punto de acceso (AP)"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué dispositivo separa dominios de broadcast?",
+    opciones: ["Switch capa 2", "Hub", "Router", "Bridge"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Cuál es una dirección IPv4 privada clase A?",
+    opciones: ["172.31.0.0/16", "192.168.0.0/24", "10.0.0.0/8", "169.254.0.0/16"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Cuál es la dirección de loopback en IPv4?",
+    opciones: ["0.0.0.0", "255.255.255.255", "127.0.0.1", "224.0.0.1"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué clase IPv4 tiene máscara por defecto 255.255.0.0?",
+    opciones: ["Clase A", "Clase B", "Clase C", "Clase D"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué significa 0.0.0.0 en una tabla de rutas?",
+    opciones: ["Broadcast limitado", "Ruta por defecto", "Loopback", "Multicast"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál es el rango de red privada clase B?",
+    opciones: ["172.16.0.0 – 172.31.255.255", "10.0.0.0 – 10.255.255.255", "192.168.0.0 – 192.168.255.255", "100.64.0.0 – 100.127.255.255"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué máscara por defecto corresponde a una red clase C?",
+    opciones: ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.128"],
+    correcta: 2
+  },
+  {
+    enunciado: "La dirección de broadcast de una subred se obtiene:",
+    opciones: ["AND IP con máscara", "OR IP con inverso (NOT) de la máscara", "XOR IP con máscara", "Sumando 1 a la IP de red"],
+    correcta: 1
+  },
+  {
+    enunciado: "En IPv6, ¿qué notación permite abreviar ceros consecutivos una única vez?",
+    opciones: [":0:", "::", ":00:", ":ffff:"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué prefijo identifica direcciones unicast globales en IPv6?",
+    opciones: ["fc00::/7", "fe80::/10", "ff00::/8", "2000::/3"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué tipo de dirección IPv6 es fe80::/10?",
+    opciones: ["Unicast global", "Multicast", "Link-local (local de enlace)", "Unique local (local único)"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Cuál es el tipo de dirección IPv6 destinada a múltiples receptores específicos?",
+    opciones: ["Anycast", "Multicast", "Unicast", "Broadcast"],
+    correcta: 1
+  },
+  {
+    enunciado: "En Wi‑Fi, ¿qué banda suele ofrecer mayor alcance pero más interferencias?",
+    opciones: ["5 GHz", "2.4 GHz", "6 GHz", "60 GHz"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál es el estándar comercialmente llamado Wi‑Fi 6?",
+    opciones: ["802.11ac", "802.11n", "802.11ax", "802.11be"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué protocolo de seguridad Wi‑Fi es el recomendado actualmente para redes personales?",
+    opciones: ["WEP", "WPA", "WPA2-PSK", "WPA3-Personal"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Cuál de las siguientes es una buena práctica al configurar un AP doméstico?",
+    opciones: ["Usar WEP por compatibilidad", "Ocultar SSID siempre", "Usar WPA3 si es posible", "Canales aleatorios diarios"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué es una VLAN?",
+    opciones: ["Una red física independiente", "Una red lógica dentro de una LAN física", "Un protocolo de routing", "Un tipo de cableado"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un puerto configurado como access en un switch:",
+    opciones: ["Transporta múltiples VLAN con etiquetas", "Pertenece a una sola VLAN y envía tráfico sin etiquetar", "Es únicamente para uplinks", "Solo admite VLAN de voz"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un enlace trunk 802.1Q:",
+    opciones: ["Bloquea el tráfico de gestión", "Transporta varias VLAN etiquetadas", "Solo sirve para VLAN nativa", "No se usa entre switches"],
+    correcta: 1
+  },
+  {
+    enunciado: "La VLAN nativa en 802.1Q se usa para:",
+    opciones: ["Tráfico etiquetado de control", "Tráfico sin etiquetar en el trunk", "Tráfico de voz únicamente", "Bloquear BPDUs"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué permite comunicar VLANs distintas sin usar un router externo?",
+    opciones: ["Switch capa 2", "Switch capa 3 con SVI", "Hub", "Bridge"],
+    correcta: 1
+  },
+  {
+    enunciado: "Router-on-a-stick requiere:",
+    opciones: ["Interfaz física por VLAN", "Subinterfaces y encapsulation dot1Q", "STP deshabilitado", "NAT en el mismo enlace"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué protocolo evita bucles en redes conmutadas con enlaces redundantes?",
+    opciones: ["LACP", "STP", "VTP", "HSRP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El switch que sirve de referencia en STP se llama:",
+    opciones: ["Designated Switch", "Backup Bridge", "Root Bridge", "Master Switch"],
+    correcta: 2
+  },
+  {
+    enunciado: "En STP, ¿qué puerto reenvía tráfico hacia/desde un segmento?",
+    opciones: ["Root Port", "Designated Port", "Blocked Port", "Alternate Port"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué versión proporciona convergencia más rápida que STP clásico?",
+    opciones: ["PVST+ (802.1D)", "RSTP (802.1w)", "MSTP (802.1s)", "VTP v3"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Para qué sirve VTP?",
+    opciones: ["Propagar rutas entre switches", "Centralizar gestión de VLANs entre switches Cisco", "Balancear carga por enlaces", "Evitar bucles de capa 2"],
+    correcta: 1
+  },
+  {
+    enunciado: "En VTP, ¿qué modo permite crear y borrar VLANs que se propagan?",
+    opciones: ["Client", "Transparent", "Server", "Off"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué opción de VTP reduce la difusión de broadcast a VLAN presentes en los enlaces?",
+    opciones: ["VTP hashing", "VTP pruning", "VTP relay", "VTP mirror"],
+    correcta: 1
+  },
+  {
+    enunciado: "El proceso DHCP se recuerda por ‘DORA’. ¿Qué significa la ‘O’?",
+    opciones: ["Offer", "Open", "Operate", "Override"],
+    correcta: 0
+  },
+  {
+    enunciado: "DHCP opera, a nivel de transporte, sobre:",
+    opciones: ["TCP", "UDP", "SCTP", "ICMP"],
+    correcta: 1
+  },
+  {
+    enunciado: "ICMP se utiliza para:",
+    opciones: ["Transferir archivos", "Diagnóstico y mensajes de error", "Autenticación de usuarios", "Cifrado de datos"],
+    correcta: 1
+  },
+  {
+    enunciado: "El ataque que falsifica respuestas ARP para realizar MITM se denomina:",
+    opciones: ["ARP Split", "ARP Snooping", "ARP Spoofing/Poisoning", "ARP Tunneling"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Cuál NO es una medida contra ARP Spoofing?",
+    opciones: ["Dynamic ARP Inspection", "DHCP Snooping", "ARP estático", "Usar Telnet en lugar de SSH"],
+    correcta: 3
+  },
+  {
+    enunciado: "NAT/PAT permite:",
+    opciones: ["Asignar una IP pública única a múltiples hosts internos mediante puertos", "Evitar el uso de ACLs", "Sustituir el routing dinámico", "Cifrado extremo a extremo"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué tipo de NAT cambia la dirección de destino (primer paquete)?",
+    opciones: ["SNAT", "DNAT", "PAT", "NAT64"],
+    correcta: 1
+  },
+  {
+    enunciado: "En Cisco IOS, el término overload en NAT se refiere a:",
+    opciones: ["NAT estático", "NAT dinámico sin puertos", "PAT (traducción por puertos)", "Deshabilitar NAT"],
+    correcta: 2
+  },
+  {
+    enunciado: "Los puertos bien conocidos (well-known) abarcan el rango:",
+    opciones: ["0–1023", "1024–49151", "49152–65535", "10000–20000"],
+    correcta: 0
+  },
+  {
+    enunciado: "El puerto TCP estándar para HTTPS es:",
+    opciones: ["80", "21", "22", "443"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué comando en Windows muestra conexiones y puertos abiertos?",
+    opciones: ["route print", "ipconfig /all", "netstat -na", "arp -a"],
+    correcta: 2
+  },
+  {
+    enunciado: "SSH frente a Telnet:",
+    opciones: ["Ambos cifran igual", "SSH cifra, Telnet no", "Telnet cifra, SSH no", "Ninguno cifra"],
+    correcta: 1
+  },
+  {
+    enunciado: "Para habilitar SSH en equipos Cisco es necesario, entre otros pasos:",
+    opciones: ["Configurar hostname y dominio, y generar claves RSA", "Activar Telnet en VTY", "Desactivar AAA", "Usar puerto 23 obligado"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Cuál NO es un archivo típico en Cisco IOS?",
+    opciones: ["running-config", "startup-config", "IOS image", "boot.ini"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Cuál es el orden típico de arranque en un router Cisco?",
+    opciones: ["IOS → POST → Bootstrap → Config", "POST → Bootstrap → IOS → Config", "Bootstrap → POST → IOS → Config", "POST → IOS → Bootstrap → Config"],
+    correcta: 1
+  },
+  {
+    enunciado: "Una ruta estática por defecto en Cisco se configura con:",
+    opciones: ["ip route 0.0.0.0 0.0.0.0 <next-hop>", "default-route enable", "ip default-network <red>", "route add 0.0.0.0/0 gw <ip>"],
+    correcta: 0
+  },
+  {
+    enunciado: "RIP utiliza como métrica:",
+    opciones: ["Ancho de banda", "Retardo", "Saltos (hops)", "Costo acumulado SPF"],
+    correcta: 2
+  },
+  {
+    enunciado: "OSPF es un protocolo de:",
+    opciones: ["Vector distancia", "Estado de enlace (link-state)", "Path-vector", "Inundación pura"],
+    correcta: 1
+  },
+  {
+    enunciado: "EIGRP es:",
+    opciones: ["Un IGP abierto de estado de enlace", "Propietario de Cisco, híbrido con DUAL", "Un EGP de backbone", "Equivalente a BGP"],
+    correcta: 1
+  },
+  {
+    enunciado: "BGP intercambia rutas sobre:",
+    opciones: ["UDP 520", "TCP 179", "TCP 22", "UDP 67/68"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál NO es un atributo típico de BGP?",
+    opciones: ["AS-PATH", "LOCAL_PREF", "MED", "Hop Count"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué comando muestra la tabla de rutas en un router Cisco?",
+    opciones: ["show interfaces", "show ip route", "show ip protocols", "show arp"],
+    correcta: 1
+  },
+  {
+    enunciado: "En OSPF, el área backbone es:",
+    opciones: ["Área 1", "Área 10", "Área 0", "Cualquier área con DR/BDR"],
+    correcta: 2
+  },
+  {
+    enunciado: "En OSPF, ¿quién mantiene una base de datos de estado de enlace (LSDB)?",
+    opciones: ["Solo el DR", "Cada router dentro del área", "Solo ABR", "Solo ASBR"],
+    correcta: 1
+  },
+  {
+    enunciado: "En EIGRP, ¿qué algoritmo elige rutas libres de bucles y rápidas en converger?",
+    opciones: ["SPF (Dijkstra)", "Bellman-Ford", "DUAL", "Floyd–Warshall"],
+    correcta: 2
+  },
+  {
+    enunciado: "Una ACL estándar en Cisco filtra basándose en:",
+    opciones: ["IP origen únicamente", "IP origen y destino", "Protocolo y puertos", "Dirección MAC"],
+    correcta: 0
+  },
+  {
+    enunciado: "Una ACL extendida puede filtrar por:",
+    opciones: ["Solo IP origen", "IP origen/destino, protocolo y puerto", "Solo MAC destino", "Solo ICMP"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Dónde se aplican las ACL en Cisco?",
+    opciones: ["En interfaces, dirección in/out", "Solo en VTY", "Solo en consola", "En el plano de control exclusivamente"],
+    correcta: 0
+  },
+  {
+    enunciado: "La política implícita al final de una ACL es:",
+    opciones: ["permit ip any any", "deny ip any any", "permit tcp any any", "deny icmp any any"],
+    correcta: 1
+  },
+  {
+    enunciado: "El registro DNS que asocia un nombre a IPv4 es:",
+    opciones: ["AAAA", "MX", "A", "CNAME"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué registro DNS define el servidor autoritativo de una zona?",
+    opciones: ["SOA y NS", "TXT", "PTR", "SRV"],
+    correcta: 0
+  },
+  {
+    enunciado: "El dominio inverso para IPv4 se gestiona bajo:",
+    opciones: ["in-addr.arpa", "ip6.arpa", "arpa.in-addr", "reverse.dns"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Cuál es el orden jerárquico de DNS?",
+    opciones: ["Zona → Dominio raíz → TLD", "Dominio raíz → TLD → dominios de segundo nivel", "TLD → Dominio raíz → Subdominio", "Autoritativo → Recursivo → Cliente"],
+    correcta: 1
+  },
+  {
+    enunciado: "En cableado estructurado, ¿cuál NO es un subsistema ISO/IEC 11801?",
+    opciones: ["Entrada de edificio", "Backbone vertical", "Área de trabajo", "Capa de aplicación"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué elemento concentra pares a rosetas y se ubica en el rack?",
+    opciones: ["Patch panel", "PDU", "SAI/UPS", "ONT"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué altura de rack es típica en CPDs de planta?",
+    opciones: ["6U", "12U", "24U", "42U"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué medio se recomienda como backbone entre plantas si hay más de 100 m?",
+    opciones: ["UTP Cat 5e", "UTP Cat 6", "Fibra óptica", "Coaxial fino"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué comando en un switch Cisco muestra un resumen de VLANs y puertos?",
+    opciones: ["show vlan brief", "show interfaces status", "show vtp status", "show spanning-tree"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando verifica puertos en modo trunk y VLANs permitidas?",
+    opciones: ["show ip interface brief", "show interfaces trunk", "show cdp neighbors", "show etherchannel summary"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando permite ver el estado de STP y el root bridge actual?",
+    opciones: ["show vtp status", "show spanning-tree", "show mac address-table", "show lldp neighbors"],
+    correcta: 1
+  },
+  {
+    enunciado: "En VTP, ¿qué se requiere para sincronizar switches en un dominio?",
+    opciones: ["Mismo dominio, contraseña MD5 y revisión coherente", "Mismo hostname", "Mismo número de VLANs locales", "Mismo direccionamiento IP"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Cuál de estos estándares corresponde a Wi‑Fi 7?",
+    opciones: ["802.11ac", "802.11ax", "802.11be", "802.11g"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué mejoras clave introduce Wi‑Fi 6/6E respecto a 5?",
+    opciones: ["DSSS y FHSS", "OFDMA y MU-MIMO mejorado", "Solo más potencia de transmisión", "Cambio a 60 GHz"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué afirmación sobre hubs es correcta?",
+    opciones: ["Separan dominios de broadcast", "Crean un dominio de colisión por puerto", "Operan en capa 1 y repiten señales", "Aprenden direcciones MAC"],
+    correcta: 2
+  },
+  {
+    enunciado: "La dirección 255.255.255.255 es:",
+    opciones: ["Broadcast dirigido", "Broadcast limitado", "Loopback", "Multicast"],
+    correcta: 1
+  },
+  {
+    enunciado: "En IPv6, ¿cuál es correcta sobre la compresión ‘::’?",
+    opciones: ["Se puede usar múltiples veces en una misma dirección", "Solo puede usarse una vez por dirección", "Solo en direcciones multicast", "Sustituye cualquier hexadecimal no cero"],
+    correcta: 1
+  },
+  {
+    enunciado: "Las direcciones IPv4 de clase D se reservan para:",
+    opciones: ["Multicast", "Anycast", "Loopback", "Privadas"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando en Cisco crea una SVI para la VLAN 10?",
+    opciones: ["interface vlan 10", "vlan interface 10", "int svi 10", "switchport vlan 10"],
+    correcta: 0
+  },
+  {
+    enunciado: "Para habilitar enrutamiento inter‑VLAN en un switch L3 se requiere:",
+    opciones: ["ip routing", "ip route 0.0.0.0 0.0.0.0", "router ospf 1", "vlan database"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando de Cisco muestra el estado de las subinterfaces en un router?",
+    opciones: ["show ip interface brief", "show ip protocols", "show controllers", "show arp"],
+    correcta: 0
+  },
+  {
+    enunciado: "En RIP v2, para desactivar el resumen automático se usa:",
+    opciones: ["no autosummary", "no auto-summary", "ip classless", "no summary route"],
+    correcta: 1
+  },
+  {
+    enunciado: "En redes inalámbricas, el modo Ad‑hoc significa:",
+    opciones: ["Clientes conectados a un AP", "Dispositivos se conectan directamente entre sí", "Backhaul punto‑multipunto", "Uso exclusivo de 6 GHz"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué protocolo anuncia ‘Hello’ periódicos para descubrir vecinos en OSPF?",
+    opciones: ["RIP", "EIGRP", "BGP", "OSPF"],
+    correcta: 3
+  },
+  {
+    enunciado: "En EIGRP, la dirección multicast utilizada es:",
+    opciones: ["224.0.0.5", "224.0.0.10", "224.0.0.9", "239.255.255.250"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando verifica el estado de VTP en un switch Cisco?",
+    opciones: ["show vtp status", "show vlan brief", "show interfaces status", "show etherchannel summary"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Cuál es el propósito de ‘passive-interface’ en protocolos de routing?",
+    opciones: ["Bloquear tráfico de datos", "No enviar actualizaciones por esa interfaz", "Apagar la interfaz", "Eliminar rutas redistribuidas"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué solución inter‑VLAN usa subinterfaces en el router?",
+    opciones: ["SVI", "Router-on-a-stick", "MPLS", "HSRP"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué registro DNS se usa para alias de un nombre a otro?",
+    opciones: ["A", "PTR", "CNAME", "NS"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué protocolo traduce nombres a IP y es esencial para Internet?",
+    opciones: ["NTP", "DNS", "DHCP", "LDAP"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál de los siguientes no es un estado de puerto en STP clásico?",
+    opciones: ["Blocking", "Listening", "Learning", "Transmitting"],
+    correcta: 3
+  },
+  {
+    enunciado: "¿Qué protocolo de seguridad de red perimetral traduce múltiples IP privadas a una sola pública por puertos?",
+    opciones: ["NAT estático", "PAT (NAT Overload)", "NAT dinámico 1:1", "NAT64"],
+    correcta: 1
+  },
+  {
+    enunciado: "En una ACL extendida para bloquear HTTP hacia 10.10.10.5, ¿qué puerto se debe denegar?",
+    opciones: ["21", "23", "80", "443"],
+    correcta: 2
+  },
+  {
+    enunciado: "En Cisco, las ACL estándar suelen numerarse en el rango:",
+    opciones: ["1–99 y 1300–1999", "100–199", "2000–2699", "300–399"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando guarda la configuración en la NVRAM?",
+    opciones: ["copy running-config startup-config", "write erase", "reload", "copy startup-config running-config"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Cuál es una recomendación al elegir contraseñas de administración en IOS?",
+    opciones: ["Usar menos de 8 caracteres", "Reutilizar la misma en todos los equipos", "enable secret y mezcla de tipos de caracteres", "Solo números"],
+    correcta: 2
+  },
+  {
+    enunciado: "En Packet Tracer, el cable ‘Console’ conecta:",
+    opciones: ["PC a interfaz de consola del equipo", "Switch a switch", "Router a AP", "PC a puerto WAN del router"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué cable se usaba clásicamente para conectar router‑router sin switches modernos?",
+    opciones: ["UTP directo", "UTP cruzado", "Coaxial", "USB‑C"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué herramienta valida continuidad y mapa de pares en campo?",
+    opciones: ["Certificador (Fluke)", "Tester básico", "Analizador de espectro", "OTDR obligatoriamente"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando muestra direcciones IP y estado up/down de interfaces rápidamente?",
+    opciones: ["show ip interface brief", "show interfaces", "show cdp neighbors", "show controllers"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué indica ‘Gateway of last resort’ en la tabla de rutas?",
+    opciones: ["No hay default route", "Existe una ruta por defecto configurada/aprendida", "Se usa solo para estáticas flotantes", "Es una ruta conectada"],
+    correcta: 1
+  },
+  {
+    enunciado: "En BGP, la relación ‘peering’ entre AS suele ser:",
+    opciones: ["Cliente‑proveedor", "No pagada entre pares para intercambio local", "Exclusivamente internacional", "Solo en IXPs globales"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál es un comando útil para ver vecinos y sesiones BGP?",
+    opciones: ["show ip bgp neighbors", "show ip protocols", "show ip ospf neighbor", "show ip rip database"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué dirección IPv4 identifica ‘broadcast dirigido’ a una subred dada?",
+    opciones: ["La de todos 1 en la parte host de esa subred", "255.255.255.255", "0.0.0.0", "127.255.255.255"],
+    correcta: 0
+  },
+  {
+    enunciado: "En IPv6, ¿qué tipo de dirección envía al ‘mejor’ receptor desde el punto de vista topológico?",
+    opciones: ["Unicast", "Anycast", "Multicast", "Broadcast"],
+    correcta: 1
+  },
+  {
+    enunciado: "Para etiquetar correctamente una instalación según ANSI/TIA‑606‑A debes:",
+    opciones: ["Nombrar puertos con colores al azar", "Seguir codificación espacio‑panel‑puerto (p.ej., 5A‑A‑01)", "Usar solo números secuenciales sin prefijo", "Evitar etiquetas en vertical"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando en Cisco verifica el estado de una interfaz trunk específica?",
+    opciones: ["show interfaces trunk", "show vlan id 10", "show vtp counters", "show ip route connected"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué capa del modelo OSI encapsula y direcciona lógicamente a través de redes?",
+    opciones: ["Transporte", "Red", "Enlace", "Física"],
+    correcta: 1
+  },
+  {
+    enunciado: "En una red conmutada moderna, las colisiones son raras porque:",
+    opciones: ["Siempre hay half‑duplex", "Los switches aíslan dominios de colisión y operan full‑duplex", "Se usa CSMA/CA", "Se deshabilita el FCS"],
+    correcta: 1
+  }
+]
+
+
+
+function TestInteractivo() {
+  const [respuestas, setRespuestas] = React.useState(Array(preguntas.length).fill(null));
+  const [corregido, setCorregido] = React.useState(false);
+
+  const seleccionar = (pIndex, rIndex) => {
+    const copia = [...respuestas];
+    copia[pIndex] = rIndex;
+    setRespuestas(copia);
+  };
+
+  const puntaje = respuestas.reduce((acc, r, i) => {
+    if (r === preguntas[i].correcta) return acc + 1;
+    return acc;
+  }, 0);
+
+  return (
+    <div className="test-container">
+      <h1 className="test-title">🎮 Test Interactivo Autocorregible</h1>
+
+      {preguntas.map((p, i) => (
+        <div key={i} className="card">
+          <h2 className="question-title">
+            {i + 1}. {p.enunciado}
+          </h2>
+
+          {p.opciones.map((op, j) => {
+            const seleccionado = respuestas[i] === j;
+            const esCorrecta = p.correcta === j;
+
+            let clases = "answer-btn";
+            if (seleccionado) clases += " answer-selected";
+            if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
+            if (corregido && esCorrecta) clases += " answer-correct";
+
+            return (
+              <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
+                {op}
+              </button>
+            );
+          })}
+        </div>
+      ))}
+
+      <div className="result-section">
+        <button className="btn-correct" onClick={() => setCorregido(true)}>
+          Corregir ❤️🩷🧡💛💚💙🩵💜🤍
+        </button>
+
+        {corregido && (
+          <p className="result-text">
+            Resultado: {puntaje} / {preguntas.length}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<TestInteractivo />);
+</script>
+<footer>
+  <p>Creado por Olga M. Moreno Martín - Planificación y Administración de redes 🛜</p>
+</footer>
+</body>
+</html>
