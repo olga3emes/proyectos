@@ -48,6 +48,16 @@ const preguntas = [
     opciones: ["4 bytes", "6 bytes", "8 bytes", "16 bytes"],
     correcta: 1
   },
+     {
+        enunciado: "¿Cuál es la forma abreviada correcta y más compacta de la dirección IPv6 2001:0db8:0000:0000:0000:00a0:0000:1c20?",
+        opciones: [
+            "2001:db8:0:0:a0:0:0:1c20",
+            "2001:db8::0a0::1c20",
+            "2001:db8::a0:0:1c20",
+            "2001::db8:a0::1c20"
+        ],
+        correcta: 2
+    },
   {
     enunciado: "¿Qué estándar define Ethernet?",
     opciones: ["IEEE 802.11", "IEEE 802.3", "IEEE 802.1Q", "IEEE 802.1D"],
@@ -208,6 +218,13 @@ const preguntas = [
     opciones: ["Interfaz física por VLAN", "Subinterfaces y encapsulation dot1Q", "STP deshabilitado", "NAT en el mismo enlace"],
     correcta: 1
   },
+  
+ {
+    enunciado: "Un ABR (Area Border Router) en OSPF:",
+    opciones: ["Conecta distintas áreas OSPF", "Redistribuye rutas externas", "Es siempre el DR", "Solo enruta tráfico multicast"],
+    correcta: 0
+  },
+
   {
     enunciado: "¿Qué protocolo evita bucles en redes conmutadas con enlaces redundantes?",
     opciones: ["LACP", "STP", "VTP", "HSRP"],
@@ -631,6 +648,719 @@ const preguntas = [
   {
     enunciado: "En una red conmutada moderna, las colisiones son raras porque:",
     opciones: ["Siempre hay half‑duplex", "Los switches aíslan dominios de colisión y operan full‑duplex", "Se usa CSMA/CA", "Se deshabilita el FCS"],
+    correcta: 1
+  },
+    {
+    enunciado: "¿Qué protocolo de descubrimiento de dispositivos es propietario de Cisco?",
+    opciones: ["LLDP", "CDP", "EDP", "STP"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando en Cisco muestra los vecinos detectados por CDP?",
+    opciones: ["show cdp neighbors", "show lldp neighbors", "show arp", "show mac address-table"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué estándar define LLDP?",
+    opciones: ["IEEE 802.1AB", "IEEE 802.3ad", "IEEE 802.1Q", "IEEE 802.11i"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando habilita LLDP globalmente en un switch Cisco?",
+    opciones: ["lldp run", "cdp enable", "enable lldp", "lldp discovery enable"],
+    correcta: 0
+  },
+  {
+    enunciado: "El puerto por defecto para consultas SNMP es:",
+    opciones: ["UDP 161", "TCP 161", "UDP 162", "TCP 162"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué versión de SNMP incorpora autenticación y cifrado?",
+    opciones: ["SNMPv1", "SNMPv2c", "SNMPv3", "Todas"],
+    correcta: 2
+  },
+  {
+    enunciado: "En Syslog, ¿qué nivel corresponde a 'emergencies'?",
+    opciones: ["0", "3", "5", "7"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando guarda logs en buffer en IOS?",
+    opciones: ["logging buffered 4096", "log buffer on", "service timestamps log", "logging console"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué protocolo se usa típicamente para sincronizar la hora en red?",
+    opciones: ["NTP", "SMTP", "TFTP", "RDP"],
+    correcta: 0
+  },
+  {
+    enunciado: "NTP utiliza por defecto el puerto:",
+    opciones: ["UDP 123", "TCP 123", "UDP 514", "TCP 514"],
+    correcta: 0
+  },
+  {
+    enunciado: "En DHCP, la opción que entrega la puerta de enlace por defecto es:",
+    opciones: ["Opción 3", "Opción 6", "Opción 15", "Opción 43"],
+    correcta: 0
+  },
+  {
+    enunciado: "La opción 82 de DHCP está asociada a:",
+    opciones: ["Relay agent information", "DNS primario", "Sufijo de dominio", "Tiempo de concesión"],
+    correcta: 0
+  },
+  {
+    enunciado: "El comando 'ip helper-address' sirve para:",
+    opciones: ["Actuar como relay DHCP", "Habilitar NAT", "Activar LLDP", "Iniciar OSPF"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué estándar de PoE permite ~30W por puerto?",
+    opciones: ["802.3af", "802.3at (PoE+)", "802.3bt Tipo 3", "802.3bt Tipo 4"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿En qué capa OSI opera 802.1X?",
+    opciones: ["Física", "Enlace de datos", "Red", "Transporte"],
+    correcta: 1
+  },
+  {
+    enunciado: "En 802.1X, el 'autenticador' suele ser:",
+    opciones: ["El servidor RADIUS", "El switch o AP", "El cliente", "El firewall"],
+    correcta: 1
+  },
+  {
+    enunciado: "RADIUS utiliza por defecto los puertos:",
+    opciones: ["TCP 1812/1813", "UDP 1812/1813", "UDP 49", "TCP 49"],
+    correcta: 1
+  },
+  {
+    enunciado: "TACACS+ utiliza por defecto:",
+    opciones: ["UDP 49", "TCP 49", "UDP 1812", "TCP 1812"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué instrucción habilita Port Security en un puerto?",
+    opciones: ["switchport port-security", "port-security enable", "security port on", "switchport secure"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué modo de violación en Port Security apaga el puerto?",
+    opciones: ["protect", "restrict", "shutdown", "monitor"],
+    correcta: 2
+  },
+  {
+    enunciado: "La característica 'sticky MAC' en Port Security:",
+    opciones: ["Aprende MACs y las convierte en estáticas", "Borra todas las MAC", "Duplica VLANs", "Apaga el puerto al ver MACs"],
+    correcta: 0
+  },
+  {
+    enunciado: "MTU típica de Ethernet (sin jumbo frames) es:",
+    opciones: ["1200", "1500", "9000", "576"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cuál es el MTU mínimo requerido por IPv6?",
+    opciones: ["576", "1280", "1500", "9000"],
+    correcta: 1
+  },
+  {
+    enunciado: "En IPv6, la resolución de vecinos se realiza con:",
+    opciones: ["ARP", "NDP (ICMPv6)", "RARP", "LLDP"],
+    correcta: 1
+  },
+  {
+    enunciado: "Forman parte de NDP los mensajes:",
+    opciones: ["Echo Request/Reply", "Router/Neighbor Solicitation/Advertisement", "Time Exceeded/Redirect", "Destination Unreachable/Parameter Problem"],
+    correcta: 1
+  },
+  {
+    enunciado: "SLAAC permite obtener:",
+    opciones: ["Solo DNS", "IP, prefijo y gateway a partir de RA", "Solo gateway", "Solo prefijo"],
+    correcta: 1
+  },
+  {
+    enunciado: "En IPv6 RA, el flag 'M' indica:",
+    opciones: ["Usar DHCPv6 para todo (managed)", "No hay IPv6", "Usar SLAAC exclusivamente", "Gateway no disponible"],
+    correcta: 0
+  },
+    {
+    enunciado: "ICMP se utiliza principalmente para:",
+    opciones: ["Transferencia de archivos", "Mensajes de error y diagnóstico", "Cifrado de datos", "Autenticación de usuarios"],
+    correcta: 1
+  },
+  {
+    enunciado: "El comando 'ping' usa los mensajes ICMP:",
+    opciones: ["Destination Unreachable", "Time Exceeded", "Echo Request / Echo Reply", "Redirect"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿En qué capa del modelo OSI se sitúa ICMP?",
+    opciones: ["Aplicación", "Transporte", "Red", "Enlace de datos"],
+    correcta: 2
+  },
+  {
+    enunciado: "Traceroute/tracert suele apoyarse en el mensaje ICMP:",
+    opciones: ["Echo Reply", "Time Exceeded", "Redirect", "Timestamp"],
+    correcta: 1
+  },
+  {
+    enunciado: "ICMP viaja encapsulado dentro de:",
+    opciones: ["TCP", "UDP", "IP", "ARP"],
+    correcta: 2
+  },
+  {
+    enunciado: "Un firewall que bloquee ICMP puede:",
+    opciones: ["Mejorar el ping", "Romper diagnósticos básicos", "Evitar STP", "Desactivar DHCP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El mensaje ICMP 'Destination Unreachable' indica:",
+    opciones: ["Que el host está saturado", "Que no se puede llegar al destino", "Que el DNS falló", "Que el enlace es half‑duplex"],
+    correcta: 1
+  },
+  {
+    enunciado: "El campo TTL de IP influye en ICMP porque al agotarse genera:",
+    opciones: ["Echo Reply", "Redirect", "Time Exceeded", "Parameter Problem"],
+    correcta: 2
+  },
+  {
+    enunciado: "ICMP no se usa para transportar datos de usuario porque:",
+    opciones: ["No tiene puertos", "No es fiable", "No es orientado a conexión", "No está diseñado para aplicaciones"],
+    correcta: 3
+  },
+  {
+    enunciado: "Un mensaje ICMP 'Redirect' indica:",
+    opciones: ["Que hay una mejor ruta por otro gateway", "Que el MTU es pequeño", "Que el DNS cambió", "Que el AP está lejos"],
+    correcta: 0
+  },
+
+  // =========================
+  // ARP (10)
+  // =========================
+  {
+    enunciado: "¿Cuál es la función de ARP?",
+    opciones: ["Resolver nombres a IP", "Obtener MAC a partir de una IP en la LAN", "Asignar IP por DHCP", "Descubrir redes remotas"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un ARP Request se envía típicamente como:",
+    opciones: ["Unicast al destino", "Broadcast a la LAN", "Multicast 224.0.0.9", "Trama etiquetada 802.1Q"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un ARP Reply se envía normalmente como:",
+    opciones: ["Broadcast", "Multicast", "Unicast al solicitante", "Trama trunk"],
+    correcta: 2
+  },
+  {
+    enunciado: "El término 'Gratuitous ARP' significa:",
+    opciones: ["ARP hacia Internet", "Anunciar IP/MAC sin haber petición previa", "Borrar la tabla ARP", "ARP solo para routers"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un ataque de envenenamiento ARP (ARP spoofing) permite:",
+    opciones: ["Cifrar ICMP", "Man‑in‑the‑Middle en la LAN", "Eliminar DHCP", "Crear VLANs"],
+    correcta: 1
+  },
+  {
+    enunciado: "Medida de mitigación contra ARP spoofing indicada en el temario:",
+    opciones: ["VTP server", "Dynamic ARP Inspection", "Spanning‑Tree PortFast", "OSPF passive‑interface"],
+    correcta: 1
+  },
+  {
+    enunciado: "Otra función que ayuda frente a servidores DHCP falsos en la LAN es:",
+    opciones: ["DHCP Snooping", "RSTP", "LLDP", "CDP"],
+    correcta: 0
+  },
+  {
+    enunciado: "La tabla ARP de un host guarda:",
+    opciones: ["IP ↔ MAC aprendidas recientemente", "Usuarios conectados", "Rutas OSPF", "Registros DNS"],
+    correcta: 0
+  },
+  {
+    enunciado: "ARP opera en redes IPv4 principalmente porque en IPv6 lo sustituye:",
+    opciones: ["DHCPv6", "NDP (ICMPv6)", "OSPFv3", "VRRP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El ámbito de ARP se limita a:",
+    opciones: ["Toda Internet", "Toda la organización", "La subred/LAN local", "Cualquier red MPLS"],
+    correcta: 2
+  },
+
+  // =========================
+  // Tiers e Internet (10)
+  // =========================
+  {
+    enunciado: "Un ISP de nivel Tier 1 se caracteriza por:",
+    opciones: ["No tener clientes", "Alcanzar cualquier red sin pagar tránsito", "Ser solo local", "Usar exclusivamente Wi‑Fi"],
+    correcta: 1
+  },
+  {
+    enunciado: "Los ISPs Tier 2 suelen:",
+    opciones: ["Ser globales sin costo de tránsito", "Pagar tránsito a Tier 1 y hacer peering con otros Tier 2", "Ser solo de acceso local", "No anunciar rutas BGP"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un ISP Tier 3 se asocia típicamente a:",
+    opciones: ["Backbone internacional", "Acceso local y compra de tránsito", "Gestión de TLD", "Redes satelitales globales"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un IXP (Internet Exchange Point) sirve para:",
+    opciones: ["Aumentar el TTL", "Intercambiar tráfico entre redes/ISPs localmente", "Cambiar direcciones MAC", "Traducir direcciones IP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El 'peering' entre dos ISPs suele ser:",
+    opciones: ["Siempre de pago", "No pagado entre pares para intercambio local", "Solo con Tier 1", "Exclusivo de IPv6"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un PoP (Point of Presence) es:",
+    opciones: ["Un router doméstico", "Un punto de interconexión de un ISP", "Un servidor DNS raíz", "Un firewall"],
+    correcta: 1
+  },
+  {
+    enunciado: "Entre las ventajas de un IXP se citan:",
+    opciones: ["Mayor costo y latencia", "Reducir tránsito superior y latencia local", "Imposibilitar redundancia", "Eliminar BGP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El intercambio de rutas entre sistemas autónomos se hace con:",
+    opciones: ["RIP", "OSPF", "BGP", "ARP"],
+    correcta: 2
+  },
+  {
+    enunciado: "Un sistema autónomo (AS) se define como:",
+    opciones: ["Una única LAN", "Conjunto de redes bajo una administración y política comunes", "Un host con múltiples NIC", "Un CPD pequeño"],
+    correcta: 1
+  },
+  {
+    enunciado: "La función de 'tránsito' en una relación ISP cliente‑proveedor es:",
+    opciones: ["Cortar rutas", "Pasar tráfico hacia/desde Internet más amplia", "Solo peering local", "Solo multicast"],
+    correcta: 1
+  },
+
+  // =========================
+  // DNS (10)
+  // =========================
+  {
+    enunciado: "El propósito de DNS es:",
+    opciones: ["Traducir nombres de dominio a direcciones IP", "Cifrar datos", "Asignar IP dinámicamente", "Gestionar tablas ARP"],
+    correcta: 0
+  },
+  {
+    enunciado: "Estructura jerárquica de DNS (de arriba a abajo):",
+    opciones: ["TLD → Raíz → Segundo nivel", "Raíz → TLD → Segundo nivel", "Segundo nivel → Raíz → TLD", "Cliente → Recursivo → Autoritativo"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un servidor DNS autoritativo es el que:",
+    opciones: ["Resuelve recursivamente todo Internet", "Tiene la información definitiva de una zona", "Solo cachea respuestas", "Solo responde NXDOMAIN"],
+    correcta: 1
+  },
+  {
+    enunciado: "Registro para IPv4 e IPv6 respectivamente:",
+    opciones: ["MX y NS", "A y AAAA", "CNAME y PTR", "SRV y TXT"],
+    correcta: 1
+  },
+  {
+    enunciado: "El registro NS indica:",
+    opciones: ["Servidor de correo", "Servidor(es) autoritativo(s) de la zona", "Alias", "Texto libre (SPF, verificación)"],
+    correcta: 1
+  },
+  {
+    enunciado: "El registro SOA contiene:",
+    opciones: ["Inicio de autoridad y parámetros de la zona", "Lista de IPs públicas", "Cifrado TLS", "Reglas BGP"],
+    correcta: 0
+  },
+  {
+    enunciado: "La resolución inversa en IPv4 usa el dominio:",
+    opciones: ["ip6.arpa", "in-addr.arpa", "reverse.dns", "arpa.ipv4"],
+    correcta: 1
+  },
+  {
+    enunciado: "La resolución inversa en IPv6 usa el dominio:",
+    opciones: ["in-addr.arpa", "ip6.arpa", "rev6.arpa", "root‑ipv6.arpa"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un registro CNAME sirve para:",
+    opciones: ["Alias de un nombre hacia otro nombre", "Mapear IP a nombre", "Correo saliente", "Delegar zona"],
+    correcta: 0
+  },
+  {
+    enunciado: "Los resolutores y servidores suelen cachear respuestas durante:",
+    opciones: ["Un tiempo definido por el TTL", "Siempre 24 horas", "Siempre 5 minutos", "Nunca cachean"],
+    correcta: 0
+  },
+  {
+    enunciado: "En 802.1Q, ¿qué campo contiene la prioridad 802.1p (PCP)?",
+    opciones: ["12 bits VLAN ID", "3 bits PCP", "1 bit DEI", "Ninguno"],
+    correcta: 1
+  },
+  {
+    enunciado: "Cantidad de VLANs identificables con 802.1Q:",
+    opciones: ["1024", "2048", "4094", "8192"],
+    correcta: 2
+  },
+  {
+    enunciado: "El rango de VLAN extendidas en Cisco es:",
+    opciones: ["2–1001", "1002–4096", "1006–4094", "4095–8190"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué protocolo de agregación de enlaces es estándar?",
+    opciones: ["PAgP", "LACP", "DTP", "VTP"],
+    correcta: 1
+  },
+  {
+    enunciado: "LACP opera en los modos:",
+    opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
+    correcta: 1
+  },
+  {
+    enunciado: "PAgP opera en los modos:",
+    opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
+    correcta: 1
+  },
+  {
+    enunciado: "Comando para ver el método de balanceo de EtherChannel:",
+    opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
+    correcta: 1
+  },
+  {
+    enunciado: "BPDU Guard:",
+    opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
+    correcta: 1
+  },
+  {
+    enunciado: "Root Guard sirve para:",
+    opciones: ["Evitar que un puerto se convierta en root port", "Evitar que el switch pierda el rol de root", "Apagar el root bridge", "Cambiar prioridad automáticamente"],
+    correcta: 1
+  },
+  {
+    enunciado: "PortFast debe habilitarse en:",
+    opciones: ["Enlaces troncales", "Puertos hacia hosts finales", "Enlaces WAN", "Puertos de agregado"],
+    correcta: 1
+  },
+
+  {
+    enunciado: "El algoritmo usado por OSPF para calcular rutas es:",
+    opciones: ["Bellman-Ford", "DUAL", "Dijkstra (SPF)", "Floyd–Warshall"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué prioridad OSPF impide participar en la elección de DR?",
+    opciones: ["255", "128", "1", "0"],
+    correcta: 3
+  },
+  {
+    enunciado: "Orden de elección del Router ID (RID) en OSPF:",
+    opciones: ["Menor MAC", "Mayor IP de loopback", "Menor IP activa", "Aleatorio"],
+    correcta: 1
+  },
+  {
+    enunciado: "En OSPF, ¿qué LSA anuncia redes externas?",
+    opciones: ["Tipo 1", "Tipo 3", "Tipo 5", "Tipo 7"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué área OSPF permite LSAs tipo 7?",
+    opciones: ["Backbone", "Stub", "NSSA", "Totally stubby"],
+    correcta: 2
+  },
+  {
+    enunciado: "RIPv2 envía actualizaciones a la dirección multicast:",
+    opciones: ["224.0.0.9", "224.0.0.5", "224.0.0.10", "239.255.255.250"],
+    correcta: 0
+  },
+  {
+    enunciado: "Distancia administrativa de OSPF en Cisco:",
+    opciones: ["90", "100", "110", "120"],
+    correcta: 2
+  },
+  {
+    enunciado: "Distancia administrativa de eBGP por defecto:",
+    opciones: ["20", "90", "110", "200"],
+    correcta: 0
+  },
+  {
+    enunciado: "Distancia administrativa de iBGP:",
+    opciones: ["90", "110", "170", "200"],
+    correcta: 3
+  },
+  {
+    enunciado: "La métrica por defecto de EIGRP considera:",
+    opciones: ["Ancho de banda y retardo", "Saltos", "Costo genérico", "Latencia y jitter"],
+    correcta: 0
+  },
+  {
+    enunciado: "El algoritmo de EIGRP se llama:",
+    opciones: ["SPF", "DUAL", "Bellman-Ford", "Path Vector"],
+    correcta: 1
+  },
+  {
+    enunciado: "Condición para 'feasible successor' en EIGRP:",
+    opciones: ["AD del vecino < FD local", "FD del vecino < AD local", "Métrica igual", "Más saltos"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué comando anuncia una red en BGP?",
+    opciones: ["network X mask Y", "ip route X Y", "redistribute connected", "router-id X"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué atributo BGP es local y específico de Cisco?",
+    opciones: ["LOCAL_PREF", "MED", "WEIGHT", "AS-PATH"],
+    correcta: 2
+  },
+  {
+    enunciado: "¿Qué FHRP es propietario de Cisco?",
+    opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
+    correcta: 2
+  },
+  {
+    enunciado: "HSRP envía hellos a:",
+    opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
+    correcta: 1
+  },
+  {
+    enunciado: "VRRP es un estándar definido por:",
+    opciones: ["IEEE", "IETF", "ISO", "ETSI"],
+    correcta: 1
+  },
+  {
+    enunciado: "GLBP permite:",
+    opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
+    correcta: 1
+  },
+  {
+    enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US):",
+    opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
+    correcta: 1
+  },
+  {
+    enunciado: "WMM está relacionado con:",
+    opciones: ["QoS en Wi‑Fi", "Cifrado WPA3", "Canales DFS", "Roaming 802.11r"],
+    correcta: 0
+  },
+  {
+    enunciado: "El roaming rápido en Wi‑Fi se asocia a:",
+    opciones: ["802.11k/v/r", "802.11i", "802.11ax", "802.11be"],
+    correcta: 0
+  },
+  {
+    enunciado: "El BSSID corresponde a:",
+    opciones: ["Nombre de red", "MAC de la radio/SSID", "Canal del AP", "Clave PSK"],
+    correcta: 1
+  },
+  {
+    enunciado: "TFTP usa por defecto:",
+    opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
+    correcta: 0
+  },
+  {
+    enunciado: "En FTP activo, el puerto de datos del servidor es:",
+    opciones: ["21/TCP", "20/TCP", "69/UDP", "445/TCP"],
+    correcta: 1
+  },
+  {
+    enunciado: "El comando 'service password-encryption' en IOS:",
+    opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Cómo se almacena 'enable secret'?",
+    opciones: ["MD5/hashed", "Tipo 7 reversible", "AES-256", "Base64"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué hace 'login block-for' en IOS?",
+    opciones: ["Bloquea logins tras intentos fallidos", "Cierra VTY por inactividad", "Restringe Telnet", "Deshabilita SSH"],
+    correcta: 0
+  },
+  {
+    enunciado: "La tabla CAM de un switch almacena:",
+    opciones: ["Rutas IP", "MACs y puertos asociados", "Usuarios autenticados", "Direcciones IPv6"],
+    correcta: 1
+  },
+  {
+    enunciado: "El temporizador típico de envejecimiento de entradas CAM es:",
+    opciones: ["5 s", "300 s", "3600 s", "24 h"],
+    correcta: 1
+  },
+  {
+    enunciado: "Storm Control sirve para:",
+    opciones: ["Priorizar voz", "Limitar broadcast/multicast/unknown unicast", "Marcar DSCP", "Acelerar STP"],
+    correcta: 1
+  },
+  {
+    enunciado: "DTP es un protocolo para:",
+    opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi‑Fi", "Agregación de enlaces estándar"],
+    correcta: 0
+  },
+  {
+    enunciado: "Mejor práctica respecto a DTP en puertos trunk:",
+    opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
+    correcta: 1
+  },
+   {
+    enunciado: "¿Cómo se posiciona WiMAX frente a Wi‑Fi?",
+    opciones: ["WiMAX sustituye a Wi‑Fi en interiores", "WiMAX es para acceso metropolitano/rural; Wi‑Fi para LAN locales", "Ambos son idénticos", "Wi‑Fi reemplaza a WiMAX en backhaul"],
+    correcta: 1
+  },
+  {
+    enunciado: "La VLAN nativa por defecto en Cisco es:",
+    opciones: ["0", "1", "100", "4094"],
+    correcta: 1
+  },
+  {
+    enunciado: "Un 'native VLAN mismatch' puede provocar:",
+    opciones: ["Cifrado débil", "Tráfico sin etiquetar en VLAN distinta", "Bucle de capa 3", "Pérdida de ARP"],
+    correcta: 1
+  },
+  {
+    enunciado: "Comando para bajar la prioridad de un switch y que otro sea root (VLAN 1):",
+    opciones: ["spanning-tree vlan 1 priority 4096", "stp root primary", "spanning-tree mode rapid-pvst", "spanning-tree vlan 1 cost 0"],
+    correcta: 0
+  },
+  {
+    enunciado: "RSTP define estados de puerto:",
+    opciones: ["Blocking/Listening/Learning/Forwarding", "Discarding/Learning/Forwarding", "Disabled/Listening/Forwarding", "Alternate/Backup/Designated/Root"],
+    correcta: 1
+  },
+  {
+    enunciado: "Comando para ver el detalle STP de una interfaz concreta:",
+    opciones: ["show spanning-tree interface Gi1/0/1 detail", "show vtp status", "show interfaces status", "show ip interface brief"],
+    correcta: 0
+  },
+  {
+    enunciado: "En VTP v3, para desactivarlo completamente:",
+    opciones: ["vtp mode off", "no vtp run", "vtp disable", "vtp shutdown"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué riesgo implica el número de revisión de VTP?",
+    opciones: ["Debe ser 0 siempre", "Un switch con revisión mayor puede borrar/alterar VLANs", "No afecta", "Solo cambia el dominio"],
+    correcta: 1
+  },
+  {
+    enunciado: "Registro DNS que mapea IP a nombre (consulta inversa):",
+    opciones: ["PTR", "A", "NS", "TXT"],
+    correcta: 0
+  },
+  {
+    enunciado: "Registro DNS que anuncia servicios (_sip._tcp, etc.):",
+    opciones: ["SRV", "MX", "CNAME", "SOA"],
+    correcta: 0
+  },
+  {
+    enunciado: "En IPv4, el campo TTL indica:",
+    opciones: ["Control de congestión", "Número de saltos máximo", "Prioridad de paquete", "Tamaño de ventana"],
+    correcta: 1
+  },
+  {
+    enunciado: "Path MTU Discovery depende de recibir:",
+    opciones: ["ICMP 'Fragmentation needed'", "ARP Reply", "DNS Response", "SNMP Trap"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué flag TCP señala el inicio de la conexión?",
+    opciones: ["FIN", "SYN", "RST", "URG"],
+    correcta: 1
+  },
+  {
+    enunciado: "¿Qué comando desactiva el resumen automático en EIGRP clásico?",
+    opciones: ["no auto-summary", "no autosummary", "eigrp no-summary", "summary disable"],
+    correcta: 0
+  },
+  {
+    enunciado: "Multicast de OSPF para 'all routers' es:",
+    opciones: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
+    correcta: 0
+  },
+  {
+    enunciado: "Multicast de OSPF para DR/BDR es:",
+    opciones: ["224.0.0.5", "224.0.0.6", "224.0.0.9", "224.0.0.10"],
+    correcta: 1
+  },
+  {
+    enunciado: "Comando que habilita el routing IPv6 en un switch L3 Cisco:",
+    opciones: ["ipv6 routing", "ip routing", "router ipv6", "ipv6 enable"],
+    correcta: 0
+  },
+  {
+    enunciado: "En IPv6, ::1 es la dirección:",
+    opciones: ["Link-local", "Loopback", "Multicast", "Anycast"],
+    correcta: 1
+  },
+  {
+    enunciado: "NAT64 traduce:",
+    opciones: ["IPv4 público a privado", "IPv6 a IPv4", "IPv4 a IPv6 y viceversa sin estado", "MAC a IP"],
+    correcta: 1
+  },
+  {
+    enunciado: "NPTv6 realiza:",
+    opciones: ["Port Address Translation", "Traducción de prefijos IPv6 (1:1)", "Traducción de IPv6 a IPv4", "SLAAC"],
+    correcta: 1
+  },
+  {
+    enunciado: "Comando para ver traducciones NAT activas:",
+    opciones: ["show ip nat translations", "show nat table", "show ip route nat", "show access-lists nat"],
+    correcta: 0
+  },
+  {
+    enunciado: "En Cisco, 'ip nat inside' se aplica normalmente a:",
+    opciones: ["Interfaz hacia Internet", "Interfaz hacia la LAN", "Cualquier loopback", "Solo subinterfaces"],
+    correcta: 1
+  },
+  {
+    enunciado: "Puerto por defecto de Syslog (UDP) es:",
+    opciones: ["514", "162", "22", "25"],
+    correcta: 0
+  },
+  {
+    enunciado: "Alias clásico para guardar la configuración en NVRAM:",
+    opciones: ["wr mem", "copy tftp flash", "write erase", "config-register 0x2102"],
+    correcta: 0
+  },
+  {
+    enunciado: "El sufijo 'k9' en una imagen de IOS indica:",
+    opciones: ["Soporte criptográfico", "Kernel 9", "Versión 9 de IOS", "Compatibilidad con Catalyst 9k"],
+    correcta: 0
+  },
+  {
+    enunciado: "Para permitir solo SSH en VTY se usa:",
+    opciones: ["transport input ssh", "login local", "transport output ssh", "ip ssh version 2"],
+    correcta: 0
+  },
+  {
+    enunciado: "Comando que muestra datos detallados (incluida IP de gestión) en CDP:",
+    opciones: ["show cdp neighbors detail", "show cdp", "show neighbors", "show cdp interface"],
+    correcta: 0
+  },
+  {
+    enunciado: "¿Qué encapsulado de VLAN fue propietario de Cisco y hoy está obsoleto?",
+    opciones: ["ISL", "QinQ", "MPLS", "L2TP"],
+    correcta: 0
+  },
+  {
+    enunciado: "QinQ (802.1ad) permite:",
+    opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
+    correcta: 0
+  },
+  {
+    enunciado: "Comando para dar preferencia a un router como activo en HSRP:",
+    opciones: ["standby 1 priority 110", "hsrp priority 110", "standby group 1 weight 110", "glbp 1 priority 110"],
+    correcta: 0
+  },
+  {
+    enunciado: "En HSRP, 'preempt' implica:",
+    opciones: ["Evitar que el switch sea root", "Permitir tomar el rol activo si tiene mayor prioridad", "Bloquear el grupo", "Reiniciar HSRP"],
     correcta: 1
   }
 ]
