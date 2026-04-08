@@ -37,7 +37,7 @@ p.prewrap {
   height: 300px;
   width: 200px;
   background-color: aquamarine;
-  overflow: scroll; /*lo normal sería con auto*/
+  overflow: auto; /*lo normal sería con auto*/
 }
 .desbordamiento {
   width: 300px;

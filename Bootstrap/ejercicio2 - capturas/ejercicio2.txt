@@ -1,0 +1,13 @@
+La historia de la informática 
+¿sabemos cómo ha evolucionado?
+La historia de la informática se remonta a la antigüedad con la invención de la escritura y la aparición de dispositivos para realizar cálculos aritméticos simples. Sin embargo, el verdadero inicio de la era informática moderna tuvo lugar en la década de 1940, cuando se construyeron las primeras computadoras electrónicas.
+
+La primera computadora electrónica de uso general fue la ENIAC (Electronic Numerical Integrator And Computer), que fue construida en los Estados Unidos en 1945. La ENIAC fue seguida por otras computadoras como la UNIVAC, la IBM 701 y la IBM 1401.
+
+En la década de 1960, se introdujeron los sistemas operativos y los lenguajes de programación de alto nivel, lo que permitió a los programadores escribir software de manera más eficiente. En la década de 1970, se desarrollaron las primeras computadoras personales, como la Apple I y la IBM PC, lo que llevó a la popularización de la informática.
+
+En la década de 1980, se produjo una explosión de innovación en la informática, con el surgimiento de la informática móvil, la World Wide Web, la conexión en red y el uso masivo de computadoras personales.
+
+En la década de 1990, la industria informática continuó expandiéndose y se produjo la popularización de Internet y la aparición de la web 2.0. En la década de 2000, la informática móvil y la tecnología de la nube se convirtieron en tendencias importantes.
+
+Hoy en día, la informática sigue siendo una industria en constante evolución, con la inteligencia artificial, la realidad virtual y aumentada, la computación cuántica y otras tecnologías emergentes que están revolucionando la forma en que interactuamos con la tecnología y el mundo en general.
