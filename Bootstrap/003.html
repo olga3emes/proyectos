@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="js/bootstrap.bundle.js" defer></script>
+    <script src="js/validationForms.js" defer></script>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <p class="display-1">Formularios</p>
+
+        <p>Rellena este formulario para que podamos conocerte:</p>
+
+        <form method="#" class="needs-validation" novalidate>
+
+            <div class="form-floating mb-3">
+
+                <input type="text" required pattern="[A-Za-z\s]{3,50}" minlength="3" class="form-control" name="nombre"
+                    id="nombre" aria-describedby="helpId" placeholder="Nombre" />
+                <label for="nombre" class="form-label">Nombre</label>
+
+                <div class="valid-feedback">
+                    ¡Todo bien!
+                </div>
+                <div class="invalid-feedback">
+                    Introduce aquí tu nombre ( Al menos 3 caracteres)
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" required="email" name="email" id="email" placeholder="Email" />
+                <label for="email">Email</label>
+                <small id="helpId" class="form-text text-body-secondary">Introduce aquí tu email </small>
+            </div>
+
+            <div class="form-floating">
+                <textarea class="form-control" required placeholder="Comentarios" rows="10" id="comments"></textarea>
+                <label for="comments">Comentarios</label>
+            </div>
+
+            <div class="form-check mt-3">
+                <input type="radio" class="form-check-input" id="femenino" name="sexo" required>
+                <label class="form-check-label" for="femenino">F</label>
+            </div>
+            <div class="form-check mb-3">
+                <input type="radio" class="form-check-input" id="masculino" name="sexo" required>
+                <label class="form-check-label" for="masculino">M</label>
+                <div class="invalid-feedback">Selecciona una opción</div>
+            </div>
+
+            <div class="form-check form-check-inline m-3">
+                <input class="form-control form-check-input" required type="checkbox" id="terms" value="true" />
+                <label class="form-check-label" for="terms">Acepto los términos y condiciones</label>
+            </div>
+
+            <br><br>
+
+            <button type="submit" class="btn btn-primary">
+                Enviar
+            </button>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>
