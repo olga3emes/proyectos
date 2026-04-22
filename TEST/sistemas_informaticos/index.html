@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Interactivo Autocorregible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- React y ReactDOM desde CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel para permitir JSX en navegadores -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const preguntas = [ ];
+function TestInteractivo() {
+  const [respuestas, setRespuestas] = React.useState(Array(preguntas.length).fill(null));
+  const [corregido, setCorregido] = React.useState(false);
+
+  const seleccionar = (pIndex, rIndex) => {
+    const copia = [...respuestas];
+    copia[pIndex] = rIndex;
+    setRespuestas(copia);
+  };
+
+  const puntaje = respuestas.reduce((acc, r, i) => {
+    if (r === preguntas[i].correcta) return acc + 1;
+    return acc;
+  }, 0);
+
+  return (
+    <div className="test-container">
+      <h1 className="test-title">🎮 Test Interactivo Autocorregible</h1>
+
+      {preguntas.map((p, i) => (
+        <div key={i} className="card">
+          <h2 className="question-title">
+            {i + 1}. {p.enunciado}
+          </h2>
+
+          {p.opciones.map((op, j) => {
+            const seleccionado = respuestas[i] === j;
+            const esCorrecta = p.correcta === j;
+
+            let clases = "answer-btn";
+            if (seleccionado) clases += " answer-selected";
+            if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
+            if (corregido && esCorrecta) clases += " answer-correct";
+
+            return (
+              <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
+                {op}
+              </button>
+            );
+          })}
+        </div>
+      ))}
+
+      <div className="result-section">
+        <button className="btn-correct" onClick={() => setCorregido(true)}>
+          Corregir ❤️🩷🧡💛💚💙🩵💜🤍
+        </button>
+
+        {corregido && (
+          <p className="result-text">
+            Resultado: {puntaje} / {preguntas.length}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<TestInteractivo />);
+</script>
+<footer>
+  <p>Creado por Olga M. Moreno Martín - Sistemas Informáticos 🚀</p>
+
+</footer>
+</body>
+</html>
