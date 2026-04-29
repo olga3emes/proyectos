@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>Test Interactivo Autocorregible</title>
@@ -13,2080 +14,1212 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
-  
+
 </head>
 
 <body>
 
-<div id="root"></div>
+  <div id="root"></div>
 
-<script type="text/babel">
+  <script type="text/babel">
 
-const preguntas = [
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué tipo de software es Linux?",
-    "opciones": [
-      "Privativo",
-      "Freeware",
-      "Software libre",
-      "Shareware"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué comando muestra el contenido de un directorio?",
-    "opciones": [
-      "cd",
-      "ls",
-      "pwd",
-      "cat"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué comando cambia los permisos de un archivo?",
-    "opciones": [
-      "ls",
-      "chmod",
-      "chown",
-      "ps"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué permiso se representa con 'r'?",
-    "opciones": [
-      "Ejecución",
-      "Lectura",
-      "Escritura",
-      "Propietario"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué es la BIOS/UEFI?",
-    "opciones": [
-      "Sistema operativo",
-      "Firmware de arranque",
-      "Aplicación",
-      "Driver"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos es estándar en Ubuntu?",
-    "opciones": [
-      "NTFS",
-      "ext4",
-      "APFS",
-      "exFAT"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué sistema de archivos usa Windows 11 por defecto?",
-    "opciones": [
-      "FAT32",
-      "exFAT",
-      "NTFS",
-      "ext4"
-    ],
-    "correcta": 2
-  },
-  {
-    "enunciado": "¿Qué es un sistema operativo?",
-    "opciones": [
-      "Un programa de usuario",
-      "Software base que gestiona hardware y aplicaciones",
-      "Un componente físico",
-      "Un periférico"
-    ],
-    "correcta": 1
-  },
-  {
-    "enunciado": "¿Qué recurso gestiona el sistema operativo?",
-    "opciones": [
-      "Electricidad",
-      "Procesos y memoria",
-      "Solo la impresora",
-      "El usuario"
-    ],
-    "correcta": 1
-  }
-];
-function TestInteractivo() {
-  const [respuestas, setRespuestas] = React.useState(Array(preguntas.length).fill(null));
-  const [corregido, setCorregido] = React.useState(false);
+    const preguntas = [
+    
+      {
+        "enunciado": "¿Qué es un sistema operativo?",
+        "opciones": [
+          "Un programa de usuario",
+          "Software base que gestiona hardware y aplicaciones",
+          "Un componente físico",
+          "Un periférico"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué recurso gestiona el sistema operativo?",
+        "opciones": [
+          "Electricidad",
+          "Procesos y memoria",
+          "Solo la impresora",
+          "El usuario"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué tipo de software es Linux?",
+        "opciones": [
+          "Privativo",
+          "Freeware",
+          "Software libre",
+          "Shareware"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra el contenido de un directorio?",
+        "opciones": [
+          "cd",
+          "ls",
+          "pwd",
+          "cat"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando cambia los permisos de un archivo?",
+        "opciones": [
+          "ls",
+          "chmod",
+          "chown",
+          "ps"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué permiso se representa con 'r'?",
+        "opciones": [
+          "Ejecución",
+          "Lectura",
+          "Escritura",
+          "Propietario"
+        ],
+        "correcta": 1
+      },
 
-  const seleccionar = (pIndex, rIndex) => {
-    const copia = [...respuestas];
-    copia[pIndex] = rIndex;
-    setRespuestas(copia);
-  };
+      {
+        "enunciado": "¿Qué comando muestra el directorio actual?",
+        "opciones": ["pwd", "ls", "cd", "whoami"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando lista archivos y directorios?",
+        "opciones": ["pwd", "cat", "ls", "rm"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando se usa para cambiar de directorio?",
+        "opciones": ["mv", "cp", "cd", "pwd"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra el contenido de un archivo completo?",
+        "opciones": ["less", "head", "cat", "tail"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando permite ver un archivo con desplazamiento?",
+        "opciones": ["cat", "less", "pwd", "echo"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando copia archivos?",
+        "opciones": ["mv", "rm", "cp", "ls"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando mueve o renombra archivos?",
+        "opciones": ["cp", "rm", "mv", "cat"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando elimina archivos?",
+        "opciones": ["cp", "rm", "mv", "touch"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando crea directorios?",
+        "opciones": ["touch", "rm", "mkdir", "cp"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando crea archivos vacíos?",
+        "opciones": ["mkdir", "echo", "touch", "cat"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando imprime texto en pantalla?",
+        "opciones": ["cat", "echo", "ls", "pwd"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando crea un archivo tar?",
+        "opciones": ["zip", "gzip", "tar -cvf", "cp"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando extrae un archivo tar?",
+        "opciones": ["unzip", "tar -cvf", "tar -xvf", "cp"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra procesos en ejecución?",
+        "opciones": ["ls", "ps", "top", "find"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando muestra procesos en tiempo real?",
+        "opciones": ["ps", "cat", "top", "grep"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra procesos en forma de árbol?",
+        "opciones": ["ps", "tree", "top", "pstree"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué comando muestra el espacio en disco?",
+        "opciones": ["du", "ls", "df", "pwd"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra el tamaño de una carpeta?",
+        "opciones": ["df", "ls", "du", "ps"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando busca archivos?",
+        "opciones": ["grep", "ls", "find", "pwd"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando busca texto dentro de archivos?",
+        "opciones": ["find", "cat", "grep", "less"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra las primeras líneas de un archivo?",
+        "opciones": ["tail", "cat", "head", "less"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra las últimas líneas de un archivo?",
+        "opciones": ["head", "cat", "tail", "less"],
+        "correcta": 2
+      },
+      
+      {
+        "enunciado": "¿Qué comando cambia permisos?",
+        "opciones": ["sudo", "ps", "chmod", "rm"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra el usuario actual?",
+        "opciones": ["whoami", "who", "id", "pwd"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando ejecuta como superusuario?",
+        "opciones": ["su", "chmod", "ps", "sudo"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué comando muestra el historial?",
+        "opciones": ["log", "cat", "history", "top"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando limpia la pantalla?",
+        "opciones": ["reset", "cls", "clear", "clean"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando abre la ayuda de otro comando?",
+        "opciones": ["help", "info", "man", "doc"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando instala programas en Debian/Ubuntu?",
+        "opciones": ["yum", "pacman", "apt", "dnf"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando actualiza paquetes?",
+        "opciones": ["apt install", "apt update", "apt remove", "apt clean"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando muestra consumo interactivo mejorado?",
+        "opciones": ["top", "ps", "pstree", "htop"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué comando lista archivos ocultos?",
+        "opciones": ["ls -a", "ls", "ls -l", "ls -h"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando muestra detalles de archivos?",
+        "opciones": ["ls", "ls -l", "ls -a", "cat"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando crea múltiples directorios?",
+        "opciones": ["mkdir -m", "mkdir -p", "mkdir -v", "touch"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando elimina directorios vacíos?",
+        "opciones": ["rm", "del", "rmdir", "erase"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando copia directorios recursivamente?",
+        "opciones": ["mv -r", "cp -r", "rm -r", "ls -r"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando borra directorios recursivamente?",
+        "opciones": ["cp -r", "mv -r", "rm -r", "mkdir -r"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando cambia a directorio padre?",
+        "opciones": ["cd /", "cd ..", "cd ~", "cd -"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando cambia al directorio home?",
+        "opciones": ["cd ~", "cd ..", "cd /", "pwd"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando muestra rutas absolutas en find?",
+        "opciones": ["find .", "find /", "find -name", "find -type"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando busca archivos por nombre?",
+        "opciones": ["grep", "find . -name", "locate", "ls"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué hace chmod 755?",
+        "opciones": ["Permite ejecución y lectura a todos", "Da permisos completos a todos", "Solo lectura", "Solo root puede leer"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando redirige salida a un archivo?",
+        "opciones": ["|", ">", "<", "&"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué símbolo añade contenido a un archivo?",
+        "opciones": [">", "<", ">>", "|"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando combina comandos?",
+        "opciones": ["|", ">", "<", "&"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando muestra uso por carpeta detallado?",
+        "opciones": ["df -h", "du -h", "ls -h", "ps -h"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando muestra espacio legible en disco?",
+        "opciones": ["du -h", "ls -h", "df -h", "ps -h"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra procesos de usuario?",
+        "opciones": ["ls", "find", "ps aux", "du"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando detiene un proceso?",
+        "opciones": ["stop", "kill", "end", "halt"],
+        "correcta": 1
+      },
 
-  const puntaje = respuestas.reduce((acc, r, i) => {
-    if (r === preguntas[i].correcta) return acc + 1;
-    return acc;
-  }, 0);
+      {
+        "enunciado": "¿Qué máscara tiene /16?",
+        "opciones": [
+          "255.0.0.0",
+          "255.255.255.0",
+          "255.255.255.128",
+          "255.255.0.0"
+        ],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué es CIDR?",
+        "opciones": [
+          "Un protocolo",
+          "Una máscara",
+          "Un sistema de direccionamiento flexible",
+          "Un router"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuántos hosts hay en una red /26?",
+        "opciones": ["64", "60", "30", "62"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué es una subred?",
+        "opciones": [
+          "Tipo de router",
+          "Firewall",
+          "Switch",
+          "División de red"
+        ],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué máscara corresponde a /25?",
+        "opciones": [
+          "255.255.255.0",
+          "255.255.255.128",
+          "255.255.0.0",
+          "255.255.255.192"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cuál es la dirección de broadcast de 192.168.1.0/24?",
+        "opciones": [
+          "192.168.1.1",
+          "192.168.1.254",
+          "192.168.1.255",
+          "192.168.1.0"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuál es el incremento de una red /26?",
+        "opciones": ["64", "32", "16", "8"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué IP es válida en /30?",
+        "opciones": [
+          "192.168.1.1",
+          "192.168.1.0",
+          "192.168.1.3",
+          "192.168.1.4"
+        ],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Cuántas IP útiles hay en una red /24?",
+        "opciones": ["254", "256", "255", "253"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Cuál es la máscara por defecto de una red Clase C?",
+        "opciones": [
+          "255.0.0.0",
+          "255.255.255.0",
+          "255.255.0.0",
+          "255.255.255.255"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué IP no es válida como host?",
+        "opciones": [
+          "192.168.1.0",
+          "192.168.1.1",
+          "192.168.1.10",
+          "192.168.1.20"
+        ],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué representa el broadcast?",
+        "opciones": [
+          "Inicio de red",
+          "Fin de red",
+          "Router",
+          "Cliente"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cuántos hosts tiene /16?",
+        "opciones": ["65534", "65536", "65000", "60000"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué red tiene más hosts?",
+        "opciones": ["/24", "/30", "/16", "/28"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué IP es red en /25?",
+        "opciones": [
+          "192.168.1.1",
+          "192.168.1.0",
+          "192.168.1.254",
+          "192.168.1.127"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es una máscara de subred?",
+        "opciones": [
+          "Un valor que divide red y hosts",
+          "Una dirección IP",
+          "Un identificador de red",
+          "Un protocolo"
+        ],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué indica el prefijo /8?",
+        "opciones": [
+          "8 hosts",
+          "8 bits red",
+          "8 subredes",
+          "8 routers"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cuál es el salto en /27?",
+        "opciones": ["16", "8", "64", "32"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué es una IP de red?",
+        "opciones": [
+          "Host válido",
+          "Router",
+          "Identifica la red",
+          "Firewall"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuántos bits tiene una dirección IPv4?",
+        "opciones": ["16", "64", "32", "128"],
+        "correcta": 2
+      },
+    
+    
+      {
+        "enunciado": "¿Qué es un sistema informático?",
+        "opciones": [
+          "Solo hardware",
+          "Solo software",
+          "Conjunto de hardware y software",
+          "Un sistema operativo"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué es el hardware?",
+        "opciones": [
+          "Programas",
+          "Componentes físicos",
+          "Sistema operativo",
+          "Archivos"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es el software?",
+        "opciones": [
+          "Componentes físicos",
+          "Programas y aplicaciones",
+          "Dispositivos",
+          "Redes"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es un sistema operativo?",
+        "opciones": [
+          "Un antivirus",
+          "Un hardware",
+          "Software base que gestiona hardware",
+          "Un programa de usuario"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué gestiona un sistema operativo?",
+        "opciones": [
+          "Solo archivos",
+          "Procesos, memoria y dispositivos",
+          "Solo red",
+          "Solo CPU"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué ocurriría sin sistema operativo?",
+        "opciones": [
+          "El PC funciona igual",
+          "No habría coordinación del hardware",
+          "Más rendimiento",
+          "Menos memoria"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué tipo de SO es Linux?",
+        "opciones": [
+          "Propietario",
+          "Libre",
+          "De pago obligatorio",
+          "Solo educativo"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Es cierto que Linux no tiene soporte profesional?",
+        "opciones": [
+          "Sí",
+          "No",
+          "Depende del hardware",
+          "Solo en empresas"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿El software libre es siempre gratis?",
+        "opciones": [
+          "Sí",
+          "No",
+          "Solo en empresas",
+          "Solo en educación"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué significa software libre?",
+        "opciones": [
+          "Gratis",
+          "Libertad de uso y modificación",
+          "Sin licencia",
+          "Privado"
+        ],
+        "correcta": 1
+      },
+      
+      {
+        "enunciado": "¿Qué es una licencia OEM?",
+        "opciones": [
+          "Transferible siempre",
+          "Vinculada al hardware",
+          "Libre",
+          "Sin restricciones"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Se puede usar una licencia OEM en otro PC?",
+        "opciones": [
+          "Sí",
+          "No",
+          "A veces",
+          "Solo con Linux"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es Android?",
+        "opciones": [
+          "SO de escritorio",
+          "SO móvil basado en Linux",
+          "Antivirus",
+          "Hardware"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es AOSP?",
+        "opciones": [
+          "Software de pago",
+          "Proyecto abierto de Android",
+          "Un antivirus",
+          "Un driver"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué ofrece Google Mobile Services?",
+        "opciones": [
+          "Hardware",
+          "Servicios propietarios",
+          "Sistema operativo",
+          "CPU"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es virtualización?",
+        "opciones": [
+          "Instalar software",
+          "Emular un ordenador con software",
+          "Formatear disco",
+          "Actualizar sistema"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué permite la virtualización?",
+        "opciones": [
+          "Un solo sistema operativo",
+          "Varios sistemas en un mismo equipo",
+          "Solo Linux",
+          "Solo Windows"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es una máquina virtual?",
+        "opciones": [
+          "Un hardware físico",
+          "Un software que emula un ordenador",
+          "Una red",
+          "Un servidor físico"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cómo se llama el sistema principal?",
+        "opciones": [
+          "Guest",
+          "Host",
+          "Cliente",
+          "Servidor"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cómo se llama el sistema dentro de la VM?",
+        "opciones": [
+          "Host",
+          "Guest",
+          "Root",
+          "Kernel"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Ventaja de virtualización?",
+        "opciones": [
+          "Menos flexibilidad",
+          "Ahorro de recursos",
+          "Peor rendimiento siempre",
+          "Menos sistemas"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Inconveniente principal?",
+        "opciones": [
+          "Mayor velocidad",
+          "Ralentización",
+          "Más hardware",
+          "Más seguridad"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué software es de virtualización?",
+        "opciones": [
+          "Chrome",
+          "VirtualBox",
+          "Word",
+          "Excel"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué se necesita para crear una VM?",
+        "opciones": [
+          "Solo CPU",
+          "RAM, CPU y disco",
+          "Solo red",
+          "Solo almacenamiento"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es una ISO?",
+        "opciones": [
+          "Archivo de instalación",
+          "Archivo de red",
+          "Archivo de texto",
+          "Imagen gráfica"
+        ],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué permite compartir carpetas?",
+        "opciones": [
+          "VM aislada",
+          "Interacción host-guest",
+          "Eliminar datos",
+          "Formatear disco"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué son Guest Additions?",
+        "opciones": [
+          "Programas del host",
+          "Herramientas para mejorar VM",
+          "Drivers físicos",
+          "Sistema operativo"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es clonación de VM?",
+        "opciones": [
+          "Borrar VM",
+          "Copiar VM",
+          "Actualizar VM",
+          "Mover VM"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué tipo de clonación copia todo?",
+        "opciones": [
+          "Enlazada",
+          "Completa",
+          "Parcial",
+          "Diferencial"
+        ],
+        "correcta": 1
+      },
 
-  return (
-    <div className="test-container">
-      <h1 className="test-title">🎮 Test Interactivo Autocorregible</h1>
+      {
+        "enunciado": "¿Por qué un sistema operativo es considerado software base?",
+        "opciones": [
+          "Porque es opcional",
+          "Porque ejecuta aplicaciones",
+          "Porque gestiona el hardware y permite ejecutar software",
+          "Porque solo gestiona la red"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuál es la principal diferencia entre AOSP y GMS en Android?",
+        "opciones": [
+          "AOSP es hardware",
+          "GMS es libre y AOSP propietario",
+          "AOSP es abierto y GMS añade servicios propietarios",
+          "No hay diferencia"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "Una empresa quiere total control del sistema y acceso al código fuente. ¿Qué tipo de software debería elegir?",
+        "opciones": [
+          "Propietario",
+          "Libre",
+          "OEM",
+          "Retail"
+        ],
+        "correcta": 1
+      },
+      
+      {
+        "enunciado": "¿Por qué el software libre no implica necesariamente que sea gratuito?",
+        "opciones": [
+          "Porque siempre es de pago",
+          "Porque incluye hardware",
+          "Porque el coste puede ser por soporte o servicios",
+          "Porque no se puede modificar"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué ocurriría si una máquina virtual usa demasiada RAM del host?",
+        "opciones": [
+          "Aumenta el rendimiento",
+          "Puede ralentizar el sistema anfitrión",
+          "Se apaga automáticamente",
+          "No ocurre nada"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué ventaja clave tiene la clonación enlazada frente a la completa?",
+        "opciones": [
+          "Mayor independencia",
+          "Mayor consumo de disco",
+          "Menor uso de espacio",
+          "Mayor rendimiento"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Por qué es importante reinicializar la MAC al clonar una VM?",
+        "opciones": [
+          "Para mejorar la CPU",
+          "Para evitar conflictos de red",
+          "Para ahorrar memoria",
+          "Para actualizar el sistema"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué desventaja principal tienen las máquinas virtuales respecto a sistemas nativos?",
+        "opciones": [
+          "Mayor coste",
+          "Menor seguridad",
+          "Menor rendimiento debido a virtualización",
+          "No permiten redes"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué papel tiene el sistema operativo anfitrión (host)?",
+        "opciones": [
+          "Ejecutar el hardware directamente",
+          "Simular hardware",
+          "Gestionar las máquinas virtuales",
+          "Solo ejecutar aplicaciones"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué ventaja aporta usar discos diferenciales en virtualización?",
+        "opciones": [
+          "Mayor velocidad",
+          "Menor consumo de CPU",
+          "Ahorro de espacio reutilizando base común",
+          "Mayor compatibilidad"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuál es una consecuencia de ejecutar aplicaciones en el sistema guest?",
+        "opciones": [
+          "Uso de hardware real directo",
+          "Mayor rendimiento",
+          "Uso de hardware emulado",
+          "Menor consumo de RAM"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Por qué muchas empresas usan máquinas virtuales preconfiguradas?",
+        "opciones": [
+          "Para aumentar errores",
+          "Para reducir administración y despliegue",
+          "Para usar menos redes",
+          "Para evitar software"
+        ],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué requisito es crítico antes de crear una máquina virtual?",
+        "opciones": [
+          "Solo internet",
+          "Solo CPU",
+          "Conocer requisitos de RAM, CPU y disco",
+          "Solo GPU"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué permite la funcionalidad de carpetas compartidas?",
+        "opciones": [
+          "Eliminar archivos",
+          "Aislar completamente sistemas",
+          "Intercambio de archivos entre host y guest",
+          "Crear redes físicas"
+        ],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Por qué la virtualización mejora la disponibilidad de servicios?",
+        "opciones": [
+          "Reduce hardware",
+          "Permite aislar fallos en máquinas independientes",
+          "Elimina necesidad de red",
+          "Reduce usuarios"
+        ],
+        "correcta": 1
+      },
 
-      {preguntas.map((p, i) => (
-        <div key={i} className="card">
-          <h2 className="question-title">
-            {i + 1}. {p.enunciado}
-          </h2>
+    
+      {
+        "enunciado": "¿Qué es realmente Linux?",
+        "opciones": ["Distribución", "Gestor de paquetes", "Entorno gráfico", "Kernel del sistema"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué incluye una distribución Linux?",
+        "opciones": ["Solo kernel", "Interfaz gráfica", "Kernel y aplicaciones", "Drivers"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Cuál es una distribución Linux empresarial?",
+        "opciones": ["Ubuntu", "Red Hat Enterprise Linux", "Kali", "Lubuntu"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué tipo de licencia tiene el kernel de Linux?",
+        "opciones": ["GPL", "OEM", "MIT", "Privada"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué garantiza la licencia GPL?",
+        "opciones": ["Uso y modificación libre", "Pago obligatorio", "Privacidad", "Licencia cerrada"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué entorno consume menos recursos?",
+        "opciones": ["Gnome", "XFCE", "LXDE", "KDE"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué entorno es modular con extensiones?",
+        "opciones": ["Unity", "LXDE", "XFCE", "Gnome"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué tipo de paquete usa Ubuntu?",
+        "opciones": ["RPM", "DEB", "TGZ", "ISO"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué contiene /etc?",
+        "opciones": ["Usuarios", "Logs", "Programas", "Configuración"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué contiene /home?",
+        "opciones": ["Usuarios", "Sistema", "Drivers", "Kernel"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué contiene /bin?",
+        "opciones": ["Logs", "Drivers", "Programas esenciales", "Usuarios"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué contiene /dev?",
+        "opciones": ["Dispositivos", "Configuración", "Usuarios", "Kernel"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué es root?",
+        "opciones": ["Usuario con privilegios máximos", "Programa", "Archivo", "Kernel"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando cambia al superusuario?",
+        "opciones": ["sudo", "cd", "su", "ls"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué hace sudo?",
+        "opciones": ["Borra archivos", "Lista archivos", "Cambia usuario completo", "Ejecuta como otro usuario"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Dónde están los usuarios?",
+        "opciones": ["/etc/shadow", "/home", "/bin", "/etc/passwd"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Dónde están las contraseñas?",
+        "opciones": ["/etc/passwd", "/root", "/etc/shadow", "/var"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué es una variable de entorno?",
+        "opciones": ["Archivo", "Valor dinámico", "Usuario", "Proceso"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Cómo se accede a variable?",
+        "opciones": ["$var", "#var", "@var", "&var"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué hace PATH?",
+        "opciones": ["Busca ejecutables", "Usuarios", "Logs", "Red"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Cómo ver PATH?",
+        "opciones": ["echo $PATH", "cat PATH", "ls PATH", "pwd PATH"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Cómo lanzar proceso en segundo plano?",
+        "opciones": ["*", "&", "#", "|"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando muestra trabajos?",
+        "opciones": ["ps", "jobs", "top", "kill"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué hace kill?",
+        "opciones": ["Crear", "Eliminar proceso", "Modificar usuario", "Ver"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué significa 'r'?",
+        "opciones": ["Leer", "Ejecutar", "Escribir", "Eliminar"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué significa 'w'?",
+        "opciones": ["Leer", "Escribir", "Ejecutar", "Acceder"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué significa 'x'?",
+        "opciones": ["Leer", "Ejecutar", "Escribir", "Borrar"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando cambia permisos?",
+        "opciones": ["chown", "chmod", "cp", "mv"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué comando cambia propietario?",
+        "opciones": ["chmod", "rm", "mv", "chown"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué código es lectura?",
+        "opciones": ["4", "2", "1", "7"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué código es escritura?",
+        "opciones": ["4", "2", "1", "0"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué código es ejecución?",
+        "opciones": ["4", "2", "1", "7"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué permisos tiene 7?",
+        "opciones": ["r--", "rw-", "rwx", "---"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué comando muestra permisos?",
+        "opciones": ["ls", "pwd", "cat", "ls -l"],
+        "correcta": 3
+      },
+      {
+        "enunciado": "¿Qué hace mount?",
+        "opciones": ["Montar sistema", "Formatear", "Borrar", "Crear usuario"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué hace umount?",
+        "opciones": ["Montar", "Desmontar", "Formatear", "Eliminar"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué hace df -h?",
+        "opciones": ["Ver procesos", "Crear carpetas", "Ver disco", "Eliminar archivos"],
+        "correcta": 2
+      },
+      {
+        "enunciado": "¿Qué hace du?",
+        "opciones": ["Espacio archivos", "Usuarios", "Procesos", "Red"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué comando instala paquetes?",
+        "opciones": ["apt", "ls", "cp", "rm"],
+        "correcta": 0
+      },
+      {
+        "enunciado": "¿Qué archivo se ejecuta al iniciar sesión?",
+        "opciones": [".bashrc", ".bash_profile", ".profile", ".env"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué es un sistema de archivos?",
+        "opciones": ["Software red", "Estructura almacenamiento", "Usuario", "Kernel"],
+        "correcta": 1
+      },
+      {
+        "enunciado": "¿Qué significa montar sistema?",
+        "opciones": ["Eliminar", "Acceder", "Crear", "Formatear"],
+        "correcta": 1
+      }
+    ];
 
-          {p.opciones.map((op, j) => {
-            const seleccionado = respuestas[i] === j;
-            const esCorrecta = p.correcta === j;
+    function TestInteractivo() {
+      const [respuestas, setRespuestas] = React.useState(Array(preguntas.length).fill(null));
+      const [corregido, setCorregido] = React.useState(false);
 
-            let clases = "answer-btn";
-            if (seleccionado) clases += " answer-selected";
-            if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
-            if (corregido && esCorrecta) clases += " answer-correct";
+      const seleccionar = (pIndex, rIndex) => {
+        const copia = [...respuestas];
+        copia[pIndex] = rIndex;
+        setRespuestas(copia);
+      };
 
-            return (
-              <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
-                {op}
-              </button>
-            );
-          })}
+      const puntaje = respuestas.reduce((acc, r, i) => {
+        if (r === preguntas[i].correcta) return acc + 1;
+        return acc;
+      }, 0);
+
+      return (
+        <div className="test-container">
+          <h1 className="test-title">🎮 Test Interactivo Autocorregible</h1>
+
+          {preguntas.map((p, i) => (
+            <div key={i} className="card">
+              <h2 className="question-title">
+                {i + 1}. {p.enunciado}
+              </h2>
+
+              {p.opciones.map((op, j) => {
+                const seleccionado = respuestas[i] === j;
+                const esCorrecta = p.correcta === j;
+
+                let clases = "answer-btn";
+                if (seleccionado) clases += " answer-selected";
+                if (corregido && seleccionado && !esCorrecta) clases += " answer-wrong";
+                if (corregido && esCorrecta) clases += " answer-correct";
+
+                return (
+                  <button key={j} onClick={() => seleccionar(i, j)} className={clases}>
+                    {op}
+                  </button>
+                );
+              })}
+            </div>
+          ))}
+
+          <div className="result-section">
+            <button className="btn-correct" onClick={() => setCorregido(true)}>
+              Corregir ❤️🩷🧡💛💚💙🩵💜🤍
+            </button>
+
+            {corregido && (
+              <p className="result-text">
+                Resultado: {puntaje} / {preguntas.length}
+              </p>
+            )}
+          </div>
         </div>
-      ))}
+      );
+    }
 
-      <div className="result-section">
-        <button className="btn-correct" onClick={() => setCorregido(true)}>
-          Corregir ❤️🩷🧡💛💚💙🩵💜🤍
-        </button>
-
-        {corregido && (
-          <p className="result-text">
-            Resultado: {puntaje} / {preguntas.length}
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(<TestInteractivo />);
-</script>
-<footer>
-  <p>Creado por Olga M. Moreno Martín - Sistemas Informáticos 🚀</p>
-
-</footer>
+    ReactDOM.createRoot(document.getElementById("root")).render(<TestInteractivo />);
+  </script>
+  <footer>
+    <p>Creado por Olga M. Moreno Martín - Sistemas informáticos</p>
+  </footer>
 </body>
+
 </html>
