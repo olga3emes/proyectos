@@ -909,11 +909,6 @@ const preguntas = [
     correcta: 1
   },
   {
-    enunciado: "Un IXP (Internet Exchange Point) sirve para:",
-    opciones: ["Aumentar el TTL", "Intercambiar tráfico entre redes/ISPs localmente", "Cambiar direcciones MAC", "Traducir direcciones IP"],
-    correcta: 1
-  },
-  {
     enunciado: "El 'peering' entre dos ISPs suele ser:",
     opciones: ["Siempre de pago", "No pagado entre pares para intercambio local", "Solo con Tier 1", "Exclusivo de IPv6"],
     correcta: 1
@@ -997,41 +992,14 @@ const preguntas = [
     opciones: ["Un tiempo definido por el TTL", "Siempre 24 horas", "Siempre 5 minutos", "Nunca cachean"],
     correcta: 0
   },
-  {
-    enunciado: "En 802.1Q, ¿qué campo contiene la prioridad 802.1p (PCP)?",
-    opciones: ["12 bits VLAN ID", "3 bits PCP", "1 bit DEI", "Ninguno"],
-    correcta: 1
-  },
+
   {
     enunciado: "Cantidad de VLANs identificables con 802.1Q:",
     opciones: ["1024", "2048", "4094", "8192"],
     correcta: 2
   },
-  {
-    enunciado: "El rango de VLAN extendidas en Cisco es:",
-    opciones: ["2–1001", "1002–4096", "1006–4094", "4095–8190"],
-    correcta: 2
-  },
-  {
-    enunciado: "¿Qué protocolo de agregación de enlaces es estándar?",
-    opciones: ["PAgP", "LACP", "DTP", "VTP"],
-    correcta: 1
-  },
-  {
-    enunciado: "LACP opera en los modos:",
-    opciones: ["on/off", "active/passive", "desirable/auto", "root/backup"],
-    correcta: 1
-  },
-  {
-    enunciado: "PAgP opera en los modos:",
-    opciones: ["active/passive", "desirable/auto", "on/off", "forward/block"],
-    correcta: 1
-  },
-  {
-    enunciado: "Comando para ver el método de balanceo de EtherChannel:",
-    opciones: ["show etherchannel summary", "show etherchannel load-balance", "show lacp neighbors", "show pagp neighbor"],
-    correcta: 1
-  },
+
+
   {
     enunciado: "BPDU Guard:",
     opciones: ["Evita ataques ARP", "Inhabilita el puerto que recibe BPDUs (edge)", "Evita NAT", "Habilita VLAN nativa"],
@@ -1113,70 +1081,16 @@ const preguntas = [
     opciones: ["network X mask Y", "ip route X Y", "redistribute connected", "router-id X"],
     correcta: 0
   },
-  {
-    enunciado: "¿Qué atributo BGP es local y específico de Cisco?",
-    opciones: ["LOCAL_PREF", "MED", "WEIGHT", "AS-PATH"],
-    correcta: 2
-  },
-  {
-    enunciado: "¿Qué FHRP es propietario de Cisco?",
-    opciones: ["VRRP", "GLBP", "HSRP", "CARP"],
-    correcta: 2
-  },
-  {
-    enunciado: "HSRP envía hellos a:",
-    opciones: ["224.0.0.18 UDP 1985", "224.0.0.2 UDP 1985", "224.0.0.102 UDP 3222", "224.0.0.5 IP 89"],
-    correcta: 1
-  },
-  {
-    enunciado: "VRRP es un estándar definido por:",
-    opciones: ["IEEE", "IETF", "ISO", "ETSI"],
-    correcta: 1
-  },
-  {
-    enunciado: "GLBP permite:",
-    opciones: ["Solo activo/pasivo", "Balanceo de carga de gateway", "Solo redundancia sin balanceo", "Enrutamiento dinámico"],
-    correcta: 1
-  },
+
   {
     enunciado: "Canales no solapados típicos en 2.4 GHz (ETSI/US):",
     opciones: ["1, 5, 9", "1, 6, 11", "2, 7, 12", "3, 8, 13"],
     correcta: 1
   },
   {
-    enunciado: "WMM está relacionado con:",
-    opciones: ["QoS en Wi‑Fi", "Cifrado WPA3", "Canales DFS", "Roaming 802.11r"],
-    correcta: 0
-  },
-  {
-    enunciado: "El roaming rápido en Wi‑Fi se asocia a:",
-    opciones: ["802.11k/v/r", "802.11i", "802.11ax", "802.11be"],
-    correcta: 0
-  },
-  {
-    enunciado: "El BSSID corresponde a:",
-    opciones: ["Nombre de red", "MAC de la radio/SSID", "Canal del AP", "Clave PSK"],
-    correcta: 1
-  },
-  {
-    enunciado: "TFTP usa por defecto:",
-    opciones: ["69/UDP", "69/TCP", "20/TCP", "445/TCP"],
-    correcta: 0
-  },
-  {
     enunciado: "En FTP activo, el puerto de datos del servidor es:",
     opciones: ["21/TCP", "20/TCP", "69/UDP", "445/TCP"],
     correcta: 1
-  },
-  {
-    enunciado: "El comando 'service password-encryption' en IOS:",
-    opciones: ["Cifra todas las contraseñas con AES", "Ofusca contraseñas tipo 7", "No hace nada", "Deshabilita Telnet"],
-    correcta: 1
-  },
-  {
-    enunciado: "¿Cómo se almacena 'enable secret'?",
-    opciones: ["MD5/hashed", "Tipo 7 reversible", "AES-256", "Base64"],
-    correcta: 0
   },
   {
     enunciado: "¿Qué hace 'login block-for' en IOS?",
@@ -1191,21 +1105,6 @@ const preguntas = [
   {
     enunciado: "El temporizador típico de envejecimiento de entradas CAM es:",
     opciones: ["5 s", "300 s", "3600 s", "24 h"],
-    correcta: 1
-  },
-  {
-    enunciado: "Storm Control sirve para:",
-    opciones: ["Priorizar voz", "Limitar broadcast/multicast/unknown unicast", "Marcar DSCP", "Acelerar STP"],
-    correcta: 1
-  },
-  {
-    enunciado: "DTP es un protocolo para:",
-    opciones: ["Negociar troncales en Cisco", "Autenticación 802.1X", "QoS en Wi‑Fi", "Agregación de enlaces estándar"],
-    correcta: 0
-  },
-  {
-    enunciado: "Mejor práctica respecto a DTP en puertos trunk:",
-    opciones: ["Dejar en dynamic desirable", "Forzar trunk o access y desactivar DTP", "Usar auto en ambos extremos", "Habilitar DTP en servidores"],
     correcta: 1
   },
    {
@@ -1227,11 +1126,6 @@ const preguntas = [
     enunciado: "Comando para bajar la prioridad de un switch y que otro sea root (VLAN 1):",
     opciones: ["spanning-tree vlan 1 priority 4096", "stp root primary", "spanning-tree mode rapid-pvst", "spanning-tree vlan 1 cost 0"],
     correcta: 0
-  },
-  {
-    enunciado: "RSTP define estados de puerto:",
-    opciones: ["Blocking/Listening/Learning/Forwarding", "Discarding/Learning/Forwarding", "Disabled/Listening/Forwarding", "Alternate/Backup/Designated/Root"],
-    correcta: 1
   },
   {
     enunciado: "Comando para ver el detalle STP de una interfaz concreta:",
@@ -1299,16 +1193,6 @@ const preguntas = [
     correcta: 1
   },
   {
-    enunciado: "NAT64 traduce:",
-    opciones: ["IPv4 público a privado", "IPv6 a IPv4", "IPv4 a IPv6 y viceversa sin estado", "MAC a IP"],
-    correcta: 1
-  },
-  {
-    enunciado: "NPTv6 realiza:",
-    opciones: ["Port Address Translation", "Traducción de prefijos IPv6 (1:1)", "Traducción de IPv6 a IPv4", "SLAAC"],
-    correcta: 1
-  },
-  {
     enunciado: "Comando para ver traducciones NAT activas:",
     opciones: ["show ip nat translations", "show nat table", "show ip route nat", "show access-lists nat"],
     correcta: 0
@@ -1319,49 +1203,9 @@ const preguntas = [
     correcta: 1
   },
   {
-    enunciado: "Puerto por defecto de Syslog (UDP) es:",
-    opciones: ["514", "162", "22", "25"],
-    correcta: 0
-  },
-  {
-    enunciado: "Alias clásico para guardar la configuración en NVRAM:",
-    opciones: ["wr mem", "copy tftp flash", "write erase", "config-register 0x2102"],
-    correcta: 0
-  },
-  {
-    enunciado: "El sufijo 'k9' en una imagen de IOS indica:",
-    opciones: ["Soporte criptográfico", "Kernel 9", "Versión 9 de IOS", "Compatibilidad con Catalyst 9k"],
-    correcta: 0
-  },
-  {
     enunciado: "Para permitir solo SSH en VTY se usa:",
     opciones: ["transport input ssh", "login local", "transport output ssh", "ip ssh version 2"],
     correcta: 0
-  },
-  {
-    enunciado: "Comando que muestra datos detallados (incluida IP de gestión) en CDP:",
-    opciones: ["show cdp neighbors detail", "show cdp", "show neighbors", "show cdp interface"],
-    correcta: 0
-  },
-  {
-    enunciado: "¿Qué encapsulado de VLAN fue propietario de Cisco y hoy está obsoleto?",
-    opciones: ["ISL", "QinQ", "MPLS", "L2TP"],
-    correcta: 0
-  },
-  {
-    enunciado: "QinQ (802.1ad) permite:",
-    opciones: ["Encapsular una VLAN dentro de otra", "Cifrar VLANs", "Enrutar entre VLANs", "Eliminar la VLAN nativa"],
-    correcta: 0
-  },
-  {
-    enunciado: "Comando para dar preferencia a un router como activo en HSRP:",
-    opciones: ["standby 1 priority 110", "hsrp priority 110", "standby group 1 weight 110", "glbp 1 priority 110"],
-    correcta: 0
-  },
-  {
-    enunciado: "En HSRP, 'preempt' implica:",
-    opciones: ["Evitar que el switch sea root", "Permitir tomar el rol activo si tiene mayor prioridad", "Bloquear el grupo", "Reiniciar HSRP"],
-    correcta: 1
   }
 ]
 
